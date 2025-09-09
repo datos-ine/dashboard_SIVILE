@@ -1,0 +1,248 @@
+---
+title: "Reporte Epidemiológico SI.VI.LE 2024"
+author: Instituto Nacional de Epidemiología "Dr. J. H. Jara"
+format: 
+    dashboard:
+        orientation: columns
+        vertical_layout: fill
+        logo: logo.svg
+        theme: custom.scss
+server: shiny
+---
+
+```{r}
+#| context: setup
+## Cargar paquetes
+pacman::p_load(
+  # Interactividad
+  shiny,
+  # Mapas
+  sf,
+  geoAr,
+  leaflet,
+  # Gráficos
+  cols4all,
+  BAMMtools,
+  apyramid,
+  plotly,
+  # Tablas
+  DT,
+  # Manejo de datos
+  rio,
+  janitor,
+  tidyverse
+)
+
+## Cargar configuración de idioma para las tablas
+source("data_table_es.R")
+
+## Cargar dataset
+datos <- import("datos_sivile_2024.csv") |>
+  mutate(across(
+    .cols = where(is.character) | codigo_institucion_id,
+    .fns = ~ factor(.x)
+  ))
+```
+
+# UCL
+
+## Valueboxes {width="30%"}
+
+```{r}
+#| content: valuebox
+#| title: UCL SIVILE activas
+#| icon: hospital
+#| color: primary
+list(value = nlevels(datos$codigo_institucion_id))
+```
+
+```{r}
+#| content: valuebox
+#| title: Registros totales
+#| icon: file-text
+list(
+  value = nrow(read_delim(
+    "../raw/export_Sistema_de_Vigilancia_de_Lesiones_SIVILE_Completo_2024.txt"
+  ))
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: Registros válidos
+#| icon: file-text
+#| color: warning
+list(value = nrow(datos))
+```
+
+## Tabla {width="70%"}
+
+```{r}
+#| id: Tabla frecuencia x UCL
+# Crear tabla de frecuencia
+tabyl(datos, codigo_institucion_id) |>
+  adorn_pct_formatting(digits = 2) |>
+  # Hacer tabla interactiva
+  datatable(
+    colnames = c("UCL", "Frecuencia", "%"),
+    rownames = FALSE,
+    options = list(
+      searching = FALSE,
+      language = dt_lang_es
+    )
+  )
+```
+
+<!-- Datos completos en sexo y edad de la persona lesionada, provincia de ocurrencia y mecanismo de la lesión. -->
+
+# Provincia
+
+## Mapa
+
+```{r}
+#| id: Mapa interactivo
+## Capa con centroides por provincia
+shp_arg <- datos |>
+  tabyl(prov_lesion, sexo) |>
+  adorn_totals(where = "col") |>
+
+  # Añadir centroides provincias
+  left_join(get_provincias(), by = join_by("prov_lesion" == "nombre")) |>
+
+  # Convertir a puntos
+  st_as_sf(coords = c(x = "centroide_lon", y = "centroide_lat"), crs = 4326)
+
+
+## Paleta personalizada
+pal <- colorBin(
+  palette = c4a(palette = "icefire"),
+  # palette = "magma",
+  domain = shp_arg$Total,
+  bins = getJenksBreaks(shp_arg$Total, k = 10)
+)
+
+## Crear mapa interactivo
+shp_arg |>
+  leaflet() |>
+  addArgTiles() |>
+  # Total por provincia
+  addCircleMarkers(
+    color = ~ pal(Total),
+    fillOpacity = .5,
+    stroke = FALSE,
+    radius = ~ scales::rescale(sqrt(Total), c(6, 10)),
+    group = "Total"
+  ) |>
+
+  # Total por provincia (mujeres)
+  addCircleMarkers(
+    color = ~ pal(Femenino),
+    fillOpacity = .5,
+    stroke = FALSE,
+    radius = ~ scales::rescale(sqrt(Femenino), c(6, 10)),
+    group = "Mujeres"
+  ) |>
+
+  # Total por provincia (varones)
+  addCircleMarkers(
+    color = ~ pal(Masculino),
+    fillOpacity = .5,
+    stroke = FALSE,
+    radius = ~ scales::rescale(sqrt(Masculino), c(6, 10)),
+    group = "Varones"
+  ) |>
+
+  # Leyenda
+  addLegend(
+    title = "Frecuencia",
+    pal = pal,
+    values = shp_arg$Total
+  ) |>
+
+  # Control de capas
+  addLayersControl(
+    overlayGroups = c("Total", "Mujeres", "Varones")
+  ) |>
+  hideGroup(group = c("Mujeres", "Varones"))
+```
+
+## Tabla
+```{r}
+#| context: server
+## Datos
+dataset <- datos |>
+  select(
+    Provincia = prov_lesion,
+    Sexo = sexo,
+    Edad = grupo_edad,
+    Intencionalidad = intencionalidad_cat
+  )
+
+## Selector de estratos
+output$vars <- renderUI({
+  selectInput(
+    inputId = "vars",
+    label = "Estratos:",
+    choices = c("Sexo", "Edad", "Intencionalidad"),
+    selected = NULL, # valor por defecto en el selector
+    multiple = TRUE
+  )
+})
+
+## Tabla interactiva
+output$tabla_freq <- renderDT({
+  req(dataset)
+
+  # Definir estratos: por defecto mostrar Provincia y Sexo (si input$vars es NULL)
+  estratos <- input$vars
+  if (is.null(estratos) || length(estratos) == 0) {
+    estratos <- NULL
+  }
+
+  # Construir tabla
+  tabla <- dataset |>
+    count(Provincia, across(all_of(estratos)), name = "Frecuencia") |>
+    mutate(
+      "%" = scales::percent(
+        Frecuencia / sum(Frecuencia, na.rm = TRUE),
+        accuracy = 0.01
+      ),
+      .by = Provincia
+    ) |>
+    arrange(-Frecuencia)
+
+  # Si solo hay Provincia, agregar fila de totales
+  if (is.null(estratos)) {
+    tabla <- dataset |>
+      count(Provincia, name = "Frecuencia") |>
+      mutate(
+        "%" = scales::percent(
+          Frecuencia / sum(Frecuencia, na.rm = TRUE),
+          accuracy = 0.01
+        )
+      ) |>
+      arrange(-Frecuencia)
+  }
+
+  # Mostrar DT
+  datatable(
+    tabla,
+    options = list(
+      autoWidth = TRUE,
+      searching = FALSE,
+      language = dt_lang_es
+    ),
+    rownames = FALSE,
+    selection = "single"
+  )
+})
+
+```
+
+### Tabla
+
+```{r}
+# Panel de control y tabla en UI
+uiOutput("vars")
+DTOutput("tabla_freq")
+```
