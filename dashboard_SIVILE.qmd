@@ -195,16 +195,15 @@ datos_prov <- datos |>
 
 
 ## Selector de estratos
-output$vars <- renderUI({
-  selectInput(
-    inputId = "vars",
-    label = "Estratos:",
-    choices = c("Sexo", "Edad", "Intencionalidad"),
-    selected = NULL, # valor por defecto en el selector
-    multiple = TRUE
-  )
-})
-
+# output$vars <- renderUI({
+#   selectInput(
+#     inputId = "vars",
+#     label = "Estratos:",
+#     choices = c("Sexo", "Edad", "Intencionalidad"),
+#     selected = NULL, # valor por defecto en el selector
+#     multiple = TRUE
+#   )
+# })
 
 ## Tabla interactiva
 output$tab_prov <- renderDT({
@@ -259,8 +258,15 @@ output$tab_prov <- renderDT({
 ### Tabla
 ```{r}
 #| content: card-toolbar
-uiOutput("vars", inline = TRUE)
+# uiOutput("vars", inline = TRUE)
+selectInput(
+  inputId = "vars",
+  label = "Estratos",
+  choices = c("Sexo", "Edad", "Intencionalidad"),
+  multiple = TRUE
+)
 ```
+
 ```{r}
 DTOutput("tab_prov")
 ```
