@@ -6,6 +6,9 @@ format:
         orientation: columns
         vertical_layout: fill
         logo: logo.svg
+        nav-buttons: 
+          - icon: github
+            href: https://github.com/datos-ine/dashboard_SIVILE
         theme: custom.scss
 server: shiny
 ---
@@ -46,7 +49,7 @@ datos <- import("datos_sivile_2024.csv") |>
 
 # UCL
 
-## Valueboxes {width="30%"}
+## Valuebox {width="30%"}
 
 ```{r}
 #| content: valuebox
@@ -60,11 +63,12 @@ list(value = nlevels(datos$codigo_institucion_id))
 #| content: valuebox
 #| title: Registros totales
 #| icon: file-text
-list(
-  value = nrow(read_delim(
-    "../raw/export_Sistema_de_Vigilancia_de_Lesiones_SIVILE_Completo_2024.txt"
-  ))
-)
+n_total <- read_delim(
+  "../raw/export_Sistema_de_Vigilancia_de_Lesiones_SIVILE_Completo_2024.txt"
+) |>
+  nrow()
+
+list(value = n_total)
 ```
 
 ```{r}
@@ -72,20 +76,23 @@ list(
 #| title: Registros válidos
 #| icon: file-text
 #| color: warning
-list(value = nrow(datos))
+list(
+  value = nrow(datos)
+)
 ```
 
-## Tabla {width="70%"}
+## Tabla UCL {width="70%"}
 
 ```{r}
 #| id: Tabla frecuencia x UCL
-# Crear tabla de frecuencia
+## Crear tabla de frecuencia
 tabyl(datos, codigo_institucion_id) |>
   adorn_pct_formatting(digits = 2) |>
-  # Hacer tabla interactiva
+  # Hacer interactiva
   datatable(
     colnames = c("UCL", "Frecuencia", "%"),
     rownames = FALSE,
+    autoHideNavigation = TRUE,
     options = list(
       searching = FALSE,
       language = dt_lang_es
@@ -93,12 +100,11 @@ tabyl(datos, codigo_institucion_id) |>
   )
 ```
 
-<!-- Datos completos en sexo y edad de la persona lesionada, provincia de ocurrencia y mecanismo de la lesión. -->
-
 # Provincia
 
-## Mapa
+## Mapa interactivo
 
+::: card
 ```{r}
 #| id: Mapa interactivo
 ## Capa con centroides por provincia
@@ -116,7 +122,6 @@ shp_arg <- datos |>
 ## Paleta personalizada
 pal <- colorBin(
   palette = c4a(palette = "icefire"),
-  # palette = "magma",
   domain = shp_arg$Total,
   bins = getJenksBreaks(shp_arg$Total, k = 10)
 )
@@ -124,13 +129,18 @@ pal <- colorBin(
 ## Crear mapa interactivo
 shp_arg |>
   leaflet() |>
+  # Capa base Argentina
   addArgTiles() |>
+
+  # Inset Argentina en LATAM
+  addMiniMap() |>
+
   # Total por provincia
   addCircleMarkers(
     color = ~ pal(Total),
     fillOpacity = .5,
     stroke = FALSE,
-    radius = ~ scales::rescale(sqrt(Total), c(6, 10)),
+    radius = ~ scales::rescale(sqrt(Total), c(5, 15)),
     group = "Total"
   ) |>
 
@@ -166,17 +176,23 @@ shp_arg |>
   hideGroup(group = c("Mujeres", "Varones"))
 ```
 
+Capas GIS obtenidas de [geoAr: Argentina’s Spatial Data Toolbox](https://github.com/PoliticaArgentina/geoAr)
+:::
+
 ## Tabla
+
 ```{r}
 #| context: server
-## Datos
-dataset <- datos |>
+#| id: Tabla x provincia
+## Datos para la tabla
+datos_prov <- datos |>
   select(
     Provincia = prov_lesion,
     Sexo = sexo,
     Edad = grupo_edad,
     Intencionalidad = intencionalidad_cat
   )
+
 
 ## Selector de estratos
 output$vars <- renderUI({
@@ -189,9 +205,10 @@ output$vars <- renderUI({
   )
 })
 
+
 ## Tabla interactiva
-output$tabla_freq <- renderDT({
-  req(dataset)
+output$tab_prov <- renderDT({
+  req(datos_prov)
 
   # Definir estratos: por defecto mostrar Provincia y Sexo (si input$vars es NULL)
   estratos <- input$vars
@@ -200,7 +217,7 @@ output$tabla_freq <- renderDT({
   }
 
   # Construir tabla
-  tabla <- dataset |>
+  tabla <- datos_prov |>
     count(Provincia, across(all_of(estratos)), name = "Frecuencia") |>
     mutate(
       "%" = scales::percent(
@@ -213,7 +230,7 @@ output$tabla_freq <- renderDT({
 
   # Si solo hay Provincia, agregar fila de totales
   if (is.null(estratos)) {
-    tabla <- dataset |>
+    tabla <- datos_prov |>
       count(Provincia, name = "Frecuencia") |>
       mutate(
         "%" = scales::percent(
@@ -236,13 +253,14 @@ output$tabla_freq <- renderDT({
     selection = "single"
   )
 })
-
 ```
 
-### Tabla
 
+### Tabla
 ```{r}
-# Panel de control y tabla en UI
-uiOutput("vars")
-DTOutput("tabla_freq")
+#| content: card-toolbar
+uiOutput("vars", inline = TRUE)
+```
+```{r}
+DTOutput("tab_prov")
 ```
