@@ -48,17 +48,28 @@ datos <- import("datos_sivile_2024_clean.csv") |>
   mutate(across(
     .cols = c(codigo_institucion_id, sexo, grupo_edad, prov_lesion_cat),
     .fns = ~ factor(.x)
+  )) |>
+
+  # Variables caracter a factor
+  mutate(across(
+    .cols = c(
+      ocupacion_cat,
+      educacion_cat,
+      mecanismo_cat:contraparte,
+      lugar_lesion,
+      intencionalidad_cat:contexto_agresion,
+      egreso,
+      nat_lesion
+    ),
+    .fns = ~ 
   ))
-
-# Variables caracter a factor
-
 ```
 
-# UCL
-
+ # UCL
+  
 ## Valuebox {width="30%"}
-
-```{r}
+  
+  ```{r}
 #| content: valuebox
 #| title: UCL SIVILE activas
 #| icon: hospital
