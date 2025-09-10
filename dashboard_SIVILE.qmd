@@ -36,15 +36,22 @@ pacman::p_load(
   tidyverse
 )
 
+
 ## Cargar configuración de idioma para las tablas
 source("data_table_es.R")
 
-## Cargar dataset
-datos <- import("datos_sivile_2024.csv") |>
+
+## Cargar dataset SIVILE
+datos <- import("datos_sivile_2024_clean.csv") |>
+
+  # Convertir variables a factor
   mutate(across(
-    .cols = where(is.character) | codigo_institucion_id,
+    .cols = c(codigo_institucion_id, sexo, grupo_edad, prov_lesion_cat),
     .fns = ~ factor(.x)
   ))
+
+# Variables caracter a factor
+
 ```
 
 # UCL
@@ -299,19 +306,6 @@ datos_plot <- datos |>
     Mecanismo = mecanismo_cat,
     Intencionalidad = intencionalidad_cat,
     Egreso = egreso_cat
-  ) |>
-
-  # Recategorizar niveles
-  mutate(
-    Educación = fct_relevel(Educación, "Desconocido", after = Inf),
-    Empleo = fct_relevel(Empleo, "Otra/Desconocida", after = Inf),
-    Mecanismo = fct_relevel(Mecanismo, "Otro", after = Inf),
-    Intencionalidad = fct_relevel(
-      Intencionalidad,
-      "Otra/desconocida",
-      after = Inf
-    ),
-    Egreso = fct_relevel(Egreso, "Desconocido", after = Inf)
   )
 
 
@@ -336,7 +330,7 @@ output$pyramid_plot <- renderPlot({
 })
 ```
 
-# Datos
+<!-- # Datos
 
 ```{r}
 datos |>
@@ -356,4 +350,4 @@ datos |>
     "Tipo egreso" = egreso_cat
   ) |>
   datatable(rownames = FALSE, options = list(language = dt_lang_es))
-```
+``` -->
