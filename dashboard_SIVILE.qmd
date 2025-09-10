@@ -50,31 +50,66 @@ datos <- import("datos_sivile_2024_clean.csv") |>
     .fns = ~ factor(.x)
   )) |>
 
-  # Variables caracter a factor
+  # Cambiar orden nivel "Otro/desconocido"
   mutate(across(
     .cols = c(
       ocupacion_cat,
-      educacion_cat,
-      mecanismo_cat:contraparte,
+      mecanismo_cat,
       lugar_lesion,
-      intencionalidad_cat:contexto_agresion,
-      egreso,
+      intencionalidad_cat,
       nat_lesion
     ),
-    .fns = ~ 
-  ))
+    .fns = ~ fct_relevel(.x, "Otro/desconocido", after = Inf)
+  )) |>
+
+  # Cambiar orden nivel "Desconocido"
+  mutate(across(
+    .cols = c(
+      educacion_cat,
+      sexo_agresor,
+      egreso
+    ),
+    .fns = ~ fct_relevel(.x, "Desconocido", after = Inf)
+  )) |>
+
+  # Cambiar orden nivel "Desconocido"
+  mutate(across(
+    .cols = c(
+      cond_lesionado,
+      modo_transporte,
+      contraparte,
+      rel_agresor,
+      contexto_agresion
+    ),
+    .fns = ~ fct_relevel(.x, "Otro", after = Inf)
+  )) |>
+
+  # Renombrar columnas
+  rename(
+    UCL = codigo_institucion_id,
+    Provincia = prov_lesion_cat,
+    Sexo = sexo,
+    Edad = grupo_edad,
+    Educación = educacion_cat,
+    Ocupación = ocupacion_cat,
+    Mecanismo = mecanismo_cat,
+    Naturaleza = nat_lesion,
+    Intencionalidad = intencionalidad_cat,
+    SPG = spg,
+    Desenlace = egreso
+  )
 ```
 
- # UCL
-  
+# UCL
+    
 ## Valuebox {width="30%"}
-  
-  ```{r}
+    
+```{r}
 #| content: valuebox
 #| title: UCL SIVILE activas
 #| icon: hospital
 #| color: primary
-list(value = nlevels(datos$codigo_institucion_id))
+list(value = nlevels(datos$UCL))
 ```
 
 ```{r}
@@ -104,13 +139,12 @@ list(
 ```{r}
 #| id: Tabla frecuencia x UCL
 ## Crear tabla de frecuencia
-tabyl(datos, codigo_institucion_id) |>
+tabyl(datos, UCL) |>
   adorn_pct_formatting(digits = 2) |>
   # Hacer interactiva
   datatable(
     colnames = c("UCL", "Frecuencia", "%"),
     rownames = FALSE,
-    autoHideNavigation = TRUE,
     options = list(
       searching = FALSE,
       language = dt_lang_es
@@ -127,21 +161,20 @@ tabyl(datos, codigo_institucion_id) |>
 #| id: Mapa interactivo
 ## Capa con centroides por provincia
 shp_arg <- datos |>
-  tabyl(prov_lesion, sexo) |>
+  tabyl(Provincia, Sexo) |>
   adorn_totals(where = "col") |>
 
   # Añadir centroides provincias
-  left_join(get_provincias(), by = join_by("prov_lesion" == "nombre")) |>
+  left_join(get_provincias(), by = join_by("Provincia" == "nombre")) |>
 
   # Convertir a puntos
   st_as_sf(coords = c(x = "centroide_lon", y = "centroide_lat"), crs = 4326)
 
 
 ## Paleta personalizada
-pal <- colorBin(
+pal <- colorNumeric(
   palette = c4a(palette = "icefire"),
-  domain = shp_arg$Total,
-  bins = getJenksBreaks(shp_arg$Total, k = 10)
+  domain = c(0, shp_arg$Total)
 )
 
 ## Crear mapa interactivo
@@ -206,19 +239,9 @@ Capas GIS obtenidas de [geoAr: Argentina’s Spatial Data Toolbox](https://githu
 ```{r}
 #| context: server
 #| id: Tabla x provincia
-## Datos para la tabla
-datos_prov <- datos |>
-  select(
-    Provincia = prov_lesion,
-    Sexo = sexo,
-    Edad = grupo_edad,
-    Intencionalidad = intencionalidad_cat
-  )
-
-
 ## Tabla interactiva
 output$tab_prov <- renderDT({
-  req(datos_prov)
+  req(datos)
 
   # Definir estratos: por defecto mostrar Provincia
   estratos <- input$vars
@@ -227,7 +250,7 @@ output$tab_prov <- renderDT({
   }
 
   # Construir tabla
-  tabla <- datos_prov |>
+  tabla <- datos |>
     count(Provincia, across(all_of(estratos)), name = "Frecuencia") |>
     mutate(
       "%" = scales::percent(
@@ -236,11 +259,11 @@ output$tab_prov <- renderDT({
       ),
       .by = Provincia
     ) |>
-    arrange(-Frecuencia)
+    arrange(-Provincia)
 
   # Si solo hay Provincia, agregar fila de totales
   if (is.null(estratos)) {
-    tabla <- datos_prov |>
+    tabla <- datos |>
       count(Provincia, name = "Frecuencia") |>
       mutate(
         "%" = scales::percent(
@@ -272,7 +295,13 @@ output$tab_prov <- renderDT({
 awesomeCheckboxGroup(
   inputId = "vars",
   label = "Estratos:",
-  choices = c("Sexo", "Edad", "Intencionalidad"),
+  choices = c(
+    "Sexo",
+    "Edad",
+    "Intencionalidad",
+    "SPG",
+    "Desenlace"
+  ),
   status = "warning"
 )
 ```
@@ -287,7 +316,7 @@ DTOutput("tab_prov")
 ```{r}
 #| content: card-sidebar
 # Variable
-selectInput(inputId = "var", label = "Variable", choices = NULL)
+selectInput(inputId = "var", label = "Variable", choices = c("Edad", "Sexo"))
 
 # Estrato
 selectInput(inputId = "estrato", label = "Estratificar por", choices = NULL)
@@ -296,8 +325,20 @@ selectInput(inputId = "estrato", label = "Estratificar por", choices = NULL)
 selectInput(
   inputId = "palette",
   label = "Paleta de colores",
-  choices = c("Tokyo" = "scico.tokyo", "Icefire" = "icefire", "Magma" = "magma")
+  choices = c(
+    "Tokyo" = "scico.tokyo",
+    "Icefire" = "-icefire",
+    "Magma" = "magma"
+  )
 )
+
+# Proporción
+prettyRadioButtons(
+  inputId = "prop",
+  label = "Mostrar porcentajes",
+  choices = c("Sí" = TRUE, "No" = FALSE)
+)
+
 ```
 
 ```{r}
@@ -306,59 +347,33 @@ plotOutput("pyramid_plot")
 
 ```{r}
 #| context: server
-## Datos para el gráfico
-datos_plot <- datos |>
-  # Seleccionar variables
-  select(
-    Sexo = sexo,
-    Edad = grupo_edad,
-    Educación = nivel_instruccion_cat,
-    Empleo = sit_laboral_cat,
-    Mecanismo = mecanismo_cat,
-    Intencionalidad = intencionalidad_cat,
-    Egreso = egreso_cat
-  )
-
-
 # Actualizar selectInput dinámicamente
 observe({
-  vars <- names(datos_plot)
-  updateSelectInput(session, "var", choices = vars, selected = "Edad")
-  updateSelectInput(session, "estrato", choices = vars, selected = NULL)
+  vars <- c(
+    "Edad",
+    "Sexo",
+    "Educación",
+    "Ocupación",
+    "Mecanismo",
+    "Naturaleza",
+    "Intencionalidad",
+    "Desenlace"
+  )
+  updateSelectInput(session, "var", choices = vars[1:2], selected = "Edad")
+  updateSelectInput(session, "estrato", choices = vars[-1], selected = NULL)
 })
 
 # Renderizar gráfico
 output$pyramid_plot <- renderPlot({
-  req(input$var, input$estrato)
+  req(input$var, input$estrato, input$prop)
 
   age_pyramid(
-    data = datos_plot,
+    data = datos,
     age = input$var,
-    split = input$estrato
+    split = input$estrato,
+    proportional = input$prop
   ) +
     scale_fill_discrete_c4a_cat(palette = input$palette) +
     theme_minimal()
 })
 ```
-
-<!-- # Datos
-
-```{r}
-datos |>
-  select(
-    UCL = codigo_institucion_id,
-    Sexo = sexo,
-    Edad = grupo_edad,
-    "Nivel educativo" = nivel_instruccion_cat,
-    "Situación laboral" = sit_laboral_cat,
-    "Provincia lesión" = prov_lesion,
-    Mecanismo = mecanismo_cat,
-    Intencionalidad = intencionalidad_cat,
-    "Relación con agresor" = rel_vict_agresor,
-    "Sexo agresor" = sexo_agresor,
-    Contexto = contexto_agresion_cat,
-    SPG,
-    "Tipo egreso" = egreso_cat
-  ) |>
-  datatable(rownames = FALSE, options = list(language = dt_lang_es))
-``` -->
