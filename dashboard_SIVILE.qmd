@@ -19,6 +19,7 @@ server: shiny
 pacman::p_load(
   # Interactividad
   shiny,
+  shinyWidgets,
   # Mapas
   sf,
   geoAr,
@@ -27,7 +28,6 @@ pacman::p_load(
   cols4all,
   BAMMtools,
   apyramid,
-  plotly,
   # Tablas
   DT,
   # Manejo de datos
@@ -128,12 +128,16 @@ pal <- colorBin(
 
 ## Crear mapa interactivo
 shp_arg |>
-  leaflet() |>
+  leaflet(options = leafletOptions(minZoom = 3, maxZoom = 6)) |>
   # Capa base Argentina
   addArgTiles() |>
 
-  # Inset Argentina en LATAM
-  addMiniMap() |>
+  # Zoom inicial
+  setView(
+    lng = -64.9673, # centro aproximado de Argentina
+    lat = -34.9965,
+    zoom = 3
+  ) |>
 
   # Total por provincia
   addCircleMarkers(
@@ -194,22 +198,11 @@ datos_prov <- datos |>
   )
 
 
-## Selector de estratos
-# output$vars <- renderUI({
-#   selectInput(
-#     inputId = "vars",
-#     label = "Estratos:",
-#     choices = c("Sexo", "Edad", "Intencionalidad"),
-#     selected = NULL, # valor por defecto en el selector
-#     multiple = TRUE
-#   )
-# })
-
 ## Tabla interactiva
 output$tab_prov <- renderDT({
   req(datos_prov)
 
-  # Definir estratos: por defecto mostrar Provincia y Sexo (si input$vars es NULL)
+  # Definir estratos: por defecto mostrar Provincia
   estratos <- input$vars
   if (is.null(estratos) || length(estratos) == 0) {
     estratos <- NULL
@@ -254,19 +247,113 @@ output$tab_prov <- renderDT({
 })
 ```
 
-
 ### Tabla
+
 ```{r}
 #| content: card-toolbar
-# uiOutput("vars", inline = TRUE)
-selectInput(
+awesomeCheckboxGroup(
   inputId = "vars",
-  label = "Estratos",
+  label = "Estratos:",
   choices = c("Sexo", "Edad", "Intencionalidad"),
-  multiple = TRUE
+  status = "warning"
 )
 ```
 
 ```{r}
 DTOutput("tab_prov")
+```
+
+# Gráficos
+##
+
+```{r}
+#| content: card-sidebar
+# Variable
+selectInput(inputId = "var", label = "Variable", choices = NULL)
+
+# Estrato
+selectInput(inputId = "estrato", label = "Estratificar por", choices = NULL)
+
+# Paleta
+selectInput(
+  inputId = "palette",
+  label = "Paleta de colores",
+  choices = c("Tokyo" = "scico.tokyo", "Icefire" = "icefire", "Magma" = "magma")
+)
+```
+
+```{r}
+plotOutput("pyramid_plot")
+```
+
+```{r}
+#| context: server
+## Datos para el gráfico
+datos_plot <- datos |>
+  # Seleccionar variables
+  select(
+    Sexo = sexo,
+    Edad = grupo_edad,
+    Educación = nivel_instruccion_cat,
+    Empleo = sit_laboral_cat,
+    Mecanismo = mecanismo_cat,
+    Intencionalidad = intencionalidad_cat,
+    Egreso = egreso_cat
+  ) |>
+
+  # Recategorizar niveles
+  mutate(
+    Educación = fct_relevel(Educación, "Desconocido", after = Inf),
+    Empleo = fct_relevel(Empleo, "Otra/Desconocida", after = Inf),
+    Mecanismo = fct_relevel(Mecanismo, "Otro", after = Inf),
+    Intencionalidad = fct_relevel(
+      Intencionalidad,
+      "Otra/desconocida",
+      after = Inf
+    ),
+    Egreso = fct_relevel(Egreso, "Desconocido", after = Inf)
+  )
+
+
+# Actualizar selectInput dinámicamente
+observe({
+  vars <- names(datos_plot)
+  updateSelectInput(session, "var", choices = vars, selected = "Edad")
+  updateSelectInput(session, "estrato", choices = vars, selected = NULL)
+})
+
+# Renderizar gráfico
+output$pyramid_plot <- renderPlot({
+  req(input$var, input$estrato)
+
+  age_pyramid(
+    data = datos_plot,
+    age = input$var,
+    split = input$estrato
+  ) +
+    scale_fill_discrete_c4a_cat(palette = input$palette) +
+    theme_minimal()
+})
+```
+
+# Datos
+
+```{r}
+datos |>
+  select(
+    UCL = codigo_institucion_id,
+    Sexo = sexo,
+    Edad = grupo_edad,
+    "Nivel educativo" = nivel_instruccion_cat,
+    "Situación laboral" = sit_laboral_cat,
+    "Provincia lesión" = prov_lesion,
+    Mecanismo = mecanismo_cat,
+    Intencionalidad = intencionalidad_cat,
+    "Relación con agresor" = rel_vict_agresor,
+    "Sexo agresor" = sexo_agresor,
+    Contexto = contexto_agresion_cat,
+    SPG,
+    "Tipo egreso" = egreso_cat
+  ) |>
+  datatable(rownames = FALSE, options = list(language = dt_lang_es))
 ```
