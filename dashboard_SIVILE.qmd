@@ -6,9 +6,6 @@ format:
         orientation: columns
         vertical_layout: fill
         logo: logo.svg
-        nav-buttons: 
-          - icon: github
-            href: https://github.com/datos-ine/dashboard_SIVILE
         theme: custom.scss
 server: shiny
 ---
@@ -36,10 +33,8 @@ pacman::p_load(
   tidyverse
 )
 
-
 ## Cargar configuración de idioma para las tablas
 source("data_table_es.R")
-
 
 ## Cargar dataset SIVILE
 datos <- import("datos_sivile_2024_clean.csv") |>
@@ -101,9 +96,9 @@ datos <- import("datos_sivile_2024_clean.csv") |>
 ```
 
 # UCL
-    
+
 ## Valuebox {width="30%"}
-    
+
 ```{r}
 #| content: valuebox
 #| title: UCL SIVILE activas
@@ -139,17 +134,17 @@ list(
 ```{r}
 #| id: Tabla frecuencia x UCL
 ## Crear tabla de frecuencia
-tabyl(datos, UCL) |>
-  adorn_pct_formatting(digits = 2) |>
-  # Hacer interactiva
-  datatable(
-    colnames = c("UCL", "Frecuencia", "%"),
-    rownames = FALSE,
-    options = list(
-      searching = FALSE,
-      language = dt_lang_es
-    )
+datatable(
+  tabyl(datos, UCL) |>
+    adorn_pct_formatting(digits = 2) |>
+    arrange(-n),
+  colnames = c("UCL", "Frecuencia", "%"),
+  rownames = FALSE,
+  options = list(
+    searching = FALSE,
+    language = dt_lang_es
   )
+)
 ```
 
 # Provincia
@@ -165,11 +160,16 @@ shp_arg <- datos |>
   adorn_totals(where = "col") |>
 
   # Añadir centroides provincias
-  left_join(get_provincias(), by = join_by("Provincia" == "nombre")) |>
+  left_join(
+    get_provincias(),
+    by = join_by("Provincia" == "nombre")
+  ) |>
 
   # Convertir a puntos
-  st_as_sf(coords = c(x = "centroide_lon", y = "centroide_lat"), crs = 4326)
-
+  st_as_sf(
+    coords = c(x = "centroide_lon", y = "centroide_lat"),
+    crs = 4326
+  )
 
 ## Paleta personalizada
 pal <- colorNumeric(
@@ -237,32 +237,33 @@ Capas GIS obtenidas de [geoAr: Argentina’s Spatial Data Toolbox](https://githu
 ## Tabla
 
 ```{r}
+#| id: Selector de variables
+var_sel <- dropdownButton(
+  status = "warning",
+  right = TRUE,
+  selectizeInput(
+    inputId = "vars",
+    label = "Estratificar por:",
+    choices = c("Sexo", "Edad", "Intencionalidad", "Desenlace"),
+    multiple = TRUE,
+    options = list(placeholder = "Seleccionar variable/s")
+  )
+)
+```
+
+```{r}
 #| context: server
-#| id: Tabla x provincia
-## Tabla interactiva
+#| id: Tabla frecuencia por provincia
 output$tab_prov <- renderDT({
   req(datos)
 
-  # Definir estratos: por defecto mostrar Provincia
+  # Limitar variables a las elegibles
+  vars <- c("Sexo", "Edad", "Intencionalidad", "Desenlace")
   estratos <- input$vars
-  if (is.null(estratos) || length(estratos) == 0) {
-    estratos <- NULL
-  }
+  estratos <- intersect(estratos, vars) # filtra lo que elijan
 
-  # Construir tabla
-  tabla <- datos |>
-    count(Provincia, across(all_of(estratos)), name = "Frecuencia") |>
-    mutate(
-      "%" = scales::percent(
-        Frecuencia / sum(Frecuencia, na.rm = TRUE),
-        accuracy = 0.01
-      ),
-      .by = Provincia
-    ) |>
-    arrange(-Provincia)
-
-  # Si solo hay Provincia, agregar fila de totales
-  if (is.null(estratos)) {
+  if (length(estratos) == 0) {
+    # Sólo Provincia
     tabla <- datos |>
       count(Provincia, name = "Frecuencia") |>
       mutate(
@@ -270,11 +271,20 @@ output$tab_prov <- renderDT({
           Frecuencia / sum(Frecuencia, na.rm = TRUE),
           accuracy = 0.01
         )
-      ) |>
-      arrange(-Frecuencia)
+      )
+  } else {
+    # Provincia + variables adicionales
+    tabla <- datos |>
+      count(Provincia, across(all_of(estratos)), name = "Frecuencia") |>
+      mutate(
+        "%" = scales::percent(
+          Frecuencia / sum(Frecuencia, na.rm = TRUE),
+          accuracy = 0.01
+        ),
+        .by = Provincia
+      )
   }
 
-  # Mostrar DT
   datatable(
     tabla,
     options = list(
@@ -288,25 +298,8 @@ output$tab_prov <- renderDT({
 })
 ```
 
-### Tabla
-
 ```{r}
-#| content: card-toolbar
-awesomeCheckboxGroup(
-  inputId = "vars",
-  label = "Estratos:",
-  choices = c(
-    "Sexo",
-    "Edad",
-    "Intencionalidad",
-    "SPG",
-    "Desenlace"
-  ),
-  status = "warning"
-)
-```
-
-```{r}
+var_sel
 DTOutput("tab_prov")
 ```
 
