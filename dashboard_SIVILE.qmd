@@ -25,7 +25,6 @@ pacman::p_load(
   cols4all,
   BAMMtools,
   apyramid,
-  plotly,
   # Tablas
   DT,
   # Manejo de datos
@@ -94,6 +93,27 @@ datos <- import("datos_sivile_2024_clean.csv") |>
     SPG = spg,
     Desenlace = egreso
   )
+
+## Dataset para lesiones por tránsito
+datos_tr <- datos |>
+  filter(mecanismo_id == 1) |>
+  select(
+    Mes = mes_anio_lesion,
+    Sexo,
+    Edad,
+    `Ocupación`,
+    `Educación`,
+    Provincia,
+    Condición = cond_lesionado,
+    Transporte = modo_transporte,
+    Contraparte = contraparte,
+    "Cinturón seguridad" = cinturon_seguridad,
+    "Chaleco reflectante" = chaleco_reflectante,
+    "Asiento niños" = asiento_ninos,
+    Casco = casco_transporte,
+    SPG,
+    Desenlace
+  )
 ```
 
 # UCL
@@ -141,10 +161,13 @@ list(
 ```{r}
 #| id: Tabla frecuencia x UCL
 ## Crear tabla de frecuencia
+tab1 <- tabyl(datos, UCL) |>
+  adorn_pct_formatting(digits = 2) |>
+  arrange(-n)
+
+# Hacer interactiva
 datatable(
-  tabyl(datos, UCL) |>
-    adorn_pct_formatting(digits = 2) |>
-    arrange(-n),
+  tab1,
   colnames = c("UCL", "N", "%"),
   rownames = FALSE,
   options = list(
@@ -183,8 +206,9 @@ pal <- colorNumeric(
   domain = c(0, shp_arg$Total)
 )
 
+
 ## Crear mapa interactivo
-shp_arg |>
+mapa <- shp_arg |>
   leaflet(options = leafletOptions(minZoom = 3, maxZoom = 6)) |>
   # Capa base Argentina
   addArgTiles() |>
@@ -225,7 +249,7 @@ shp_arg |>
 
   # Leyenda
   addLegend(
-    title = "02",
+    title = "Frecuencia",
     pal = pal,
     values = shp_arg$Total
   ) |>
@@ -235,6 +259,9 @@ shp_arg |>
     overlayGroups = c("Total", "Mujeres", "Varones")
   ) |>
   hideGroup(group = c("Mujeres", "Varones"))
+
+## Mostrar mapa
+mapa
 ```
 
 <div style="font-size:0.7rem;">
@@ -256,7 +283,9 @@ var_sel <- dropdownButton(
     multiple = TRUE,
     options = list(placeholder = "Seleccionar variable/s")
   )
-)
+) |>
+  htmltools::div(style = "position:fixed; top:75px; right:50px; z-index:1000;")
+
 ```
 
 ```{r}
@@ -272,14 +301,14 @@ output$tab_prov <- renderDT({
 
   if (length(estratos) == 0) {
     # Sólo Provincia
-    tabla <- datos |>
+    tab2 <- datos |>
       count(Provincia, name = "N") |>
       mutate(
         "%" = N / sum(N, na.rm = TRUE)
       )
   } else {
     # Provincia + variables adicionales
-    tabla <- datos |>
+    tab2 <- datos |>
       count(Provincia, across(all_of(estratos)), name = "N") |>
       mutate(
         "%" = N / sum(N, na.rm = TRUE),
@@ -289,7 +318,7 @@ output$tab_prov <- renderDT({
 
   # Renderizar la tabla
   datatable(
-    tabla,
+    tab2,
     options = list(
       autoWidth = FALSE,
       searching = FALSE,
@@ -307,49 +336,13 @@ output$tab_prov <- renderDT({
 
 ```{r}
 ## Cargar selector de estratos
-htmltools::div(
-  var_sel,
-  style = "position:fixed; top:75px; right:50px; z-index:1000;"
-)
+var_sel
 
 ## Cargar tabla
 DTOutput("tab_prov")
 ```
 
 # Gráficos
-
-```{r}
-#| content: card-sidebar
-# Variable
-selectInput(inputId = "var", label = "Variable", choices = c("Edad", "Sexo"))
-
-# Estrato
-selectInput(inputId = "estrato", label = "Estratificar por", choices = NULL)
-
-# Paleta
-selectInput(
-  inputId = "palette",
-  label = "Paleta de colores",
-  choices = c(
-    "Tokyo" = "scico.tokyo",
-    "Icefire" = "-icefire",
-    "Viridis" = "viridis"
-  )
-)
-
-# Proporción
-prettyRadioButtons(
-  inputId = "prop",
-  label = "Mostrar porcentajes",
-  choices = c("Sí" = TRUE, "No" = FALSE)
-)
-
-```
-
-```{r}
-plotOutput("pyramid_plot")
-```
-
 ```{r}
 #| context: server
 # Actualizar selectInput dinámicamente
@@ -372,13 +365,156 @@ observe({
 output$pyramid_plot <- renderPlot({
   req(input$var, input$estrato, input$prop)
 
+  # Gráfico de pirámide
   age_pyramid(
     data = datos,
     age = input$var,
     split = input$estrato,
     proportional = input$prop
   ) +
+    # Cambiar formato
     scale_fill_discrete_c4a_cat(palette = input$palette) +
+    labs(y = "Frecuencia") +
     theme_minimal()
 })
+```
+
+```{r}
+#| content: card-toolbar
+#| id: Selector de estratos
+## Variable
+selectInput(inputId = "var", label = "Variable", choices = c("Edad", "Sexo"))
+
+## Estrato
+selectInput(inputId = "estrato", label = "Estratificar por", choices = NULL)
+
+## Paleta de colores
+selectInput(
+  inputId = "palette",
+  label = "Paleta de colores",
+  choices = c(
+    "Managua" = "scico.managua",
+    "Nightfall" = "tol.nightfall",
+    "RedBlue" = "tableau.red_blue_diverging",
+    "Viridis" = "viridis"
+  )
+)
+
+## Mostrar como proporción
+prettyRadioButtons(
+  inputId = "prop",
+  label = "Mostrar como porcentaje",
+  choices = c("Sí" = TRUE, "No" = FALSE)
+)
+```
+
+```{r}
+plotOutput("pyramid_plot")
+```
+
+# Tránsito
+
+```{r}
+#| context: server
+output$tabla_tr <- renderDT({
+  req(datos_tr, input$var_x)
+
+  x <- input$var_x
+  y <- input$var_y
+
+  tab3 <- datos_tr |>
+    count(across(all_of(c(x, y))), name = "N") |>
+    mutate("%" = N / sum(N, na.rm = TRUE), .by = all_of(x))
+
+  datatable(
+    tab3,
+    options = list(
+      autoWidth = FALSE,
+      searching = FALSE,
+      info = FALSE,
+      dom = 'ftlp',
+      language = dt_lang_es
+    ),
+    rownames = FALSE,
+    filter = "top",
+    selection = "single"
+  ) |>
+    formatPercentage(columns = "%", digits = 2)
+})
+
+# Gráfico dinámico
+output$plot_tr <- renderPlot({
+  req(datos_tr, input$var_x)
+
+  x <- input$var_x
+  y <- input$var_y
+
+  datos_plot <- datos_tr |>
+    count(across(all_of(c(x, y)))) |>
+    drop_na() |>
+    mutate(pct = n / sum(n, na.rm = TRUE), .by = all_of(x))
+
+  # Gráfico
+  datos_plot |>
+    ggplot(aes(x = .data[[x]], y = pct, fill = .data[[y]])) +
+    geom_col(position = input$pos) + # Columnas
+    scale_fill_discrete_c4a_cat(palette = input$palette) + # Paleta de colores
+    labs(x = x, y = "Frecuencia", fill = y) + # Etiquetas ejes
+    theme_minimal() + # Tema
+    theme(axis.text.x = element_text(angle = 45))
+})
+```
+
+##
+
+```{r}
+#| content: card-toolbar
+#| id: Selector de estratos tránsito
+## Eje X
+selectInput(
+  inputId = "var_x",
+  label = "X",
+  choices = c("Mes", "Sexo", "Edad", "Transporte")
+)
+
+## Eje Y
+selectInput(
+  inputId = "var_y",
+  label = "Y",
+  choices = names(datos_tr)[-1]
+)
+
+## Paleta de colores
+selectInput(
+  inputId = "palette",
+  label = "Paleta de colores",
+  choices = c(
+    "Managua" = "scico.managua",
+    "Nightfall" = "tol.nightfall",
+    "RedBlue" = "tableau.red_blue_diverging",
+    "Viridis" = "viridis"
+  ),
+  selected = "viridis"
+)
+
+## Tipo de barras
+prettyRadioButtons(
+  inputId = "pos",
+  label = "Posición barras",
+  status = "warning",
+  choices = c(
+    "Agrupadas" = "stack",
+    "Separadas" = "dodge"
+  )
+)
+
+```
+
+```{r}
+#| layout-ncol: 2
+## Tabla
+DTOutput("tabla_tr")
+
+## Gráfico
+plotOutput("plot_tr")
 ```
