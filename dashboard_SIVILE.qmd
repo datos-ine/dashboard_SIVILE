@@ -507,7 +507,6 @@ prettyRadioButtons(
     "Separadas" = "dodge"
   )
 )
-
 ```
 
 ```{r}
