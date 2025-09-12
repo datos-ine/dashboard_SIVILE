@@ -25,6 +25,7 @@ pacman::p_load(
   cols4all,
   BAMMtools,
   apyramid,
+  plotly,
   # Tablas
   DT,
   # Manejo de datos
@@ -121,13 +122,19 @@ list(value = n_total)
 
 ```{r}
 #| content: valuebox
-#| title: Registros válidos
+#| title: Registros válidos (*)
 #| icon: file-text
 #| color: warning
 list(
   value = nrow(datos)
 )
 ```
+
+::: {.card expandable="false" fill="false"}
+<div style="font-size:0.7rem;">
+(*) Datos completos para sexo, edad, provincia de ocurrencia e intencionalidad
+</div>
+:::
 
 ## Tabla UCL {width="70%"}
 
@@ -138,7 +145,7 @@ datatable(
   tabyl(datos, UCL) |>
     adorn_pct_formatting(digits = 2) |>
     arrange(-n),
-  colnames = c("UCL", "Frecuencia", "%"),
+  colnames = c("UCL", "N", "%"),
   rownames = FALSE,
   options = list(
     searching = FALSE,
@@ -150,8 +157,7 @@ datatable(
 # Provincia
 
 ## Mapa interactivo
-
-::: card
+::: {.card}
 ```{r}
 #| id: Mapa interactivo
 ## Capa con centroides por provincia
@@ -219,7 +225,7 @@ shp_arg |>
 
   # Leyenda
   addLegend(
-    title = "Frecuencia",
+    title = "02",
     pal = pal,
     values = shp_arg$Total
   ) |>
@@ -231,7 +237,9 @@ shp_arg |>
   hideGroup(group = c("Mujeres", "Varones"))
 ```
 
-Capas GIS obtenidas de [geoAr: Argentina’s Spatial Data Toolbox](https://github.com/PoliticaArgentina/geoAr)
+<div style="font-size:0.7rem;">
+Capas GIS obtenidas de Ruiz Nicolini J, Del Boca P, Juara J (2024). [_geoAr: Argentina's Spatial Data Toolbox_. doi:10.32614/CRAN.package.geoAr](https://github.com/PoliticaArgentina/geoAr)
+</div>
 :::
 
 ## Tabla
@@ -265,46 +273,50 @@ output$tab_prov <- renderDT({
   if (length(estratos) == 0) {
     # Sólo Provincia
     tabla <- datos |>
-      count(Provincia, name = "Frecuencia") |>
+      count(Provincia, name = "N") |>
       mutate(
-        "%" = scales::percent(
-          Frecuencia / sum(Frecuencia, na.rm = TRUE),
-          accuracy = 0.01
-        )
+        "%" = N / sum(N, na.rm = TRUE)
       )
   } else {
     # Provincia + variables adicionales
     tabla <- datos |>
-      count(Provincia, across(all_of(estratos)), name = "Frecuencia") |>
+      count(Provincia, across(all_of(estratos)), name = "N") |>
       mutate(
-        "%" = scales::percent(
-          Frecuencia / sum(Frecuencia, na.rm = TRUE),
-          accuracy = 0.01
-        ),
+        "%" = N / sum(N, na.rm = TRUE),
         .by = Provincia
       )
   }
 
+  # Renderizar la tabla
   datatable(
     tabla,
     options = list(
-      autoWidth = TRUE,
+      autoWidth = FALSE,
       searching = FALSE,
+      info = FALSE,
+      dom = 'ftlp',
       language = dt_lang_es
     ),
     rownames = FALSE,
+    filter = "top",
     selection = "single"
-  )
+  ) |>
+    formatPercentage(columns = "%", digits = 2) # mostrar como %
 })
 ```
 
 ```{r}
-var_sel
+## Cargar selector de estratos
+htmltools::div(
+  var_sel,
+  style = "position:fixed; top:75px; right:50px; z-index:1000;"
+)
+
+## Cargar tabla
 DTOutput("tab_prov")
 ```
 
 # Gráficos
-##
 
 ```{r}
 #| content: card-sidebar
@@ -321,7 +333,7 @@ selectInput(
   choices = c(
     "Tokyo" = "scico.tokyo",
     "Icefire" = "-icefire",
-    "Magma" = "magma"
+    "Viridis" = "viridis"
   )
 )
 
