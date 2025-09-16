@@ -15,7 +15,7 @@ dt_lang_es <- list(
   paginate = list(
     first = "Primero",
     previous = "Anterior",
-    "next" = "Siguiente",   # 👈 protegido con comillas
+    "next" = "Siguiente", # 👈 protegido con comillas
     last = "Último"
   ),
   aria = list(
