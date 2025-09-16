@@ -1,16 +1,29 @@
 /*-- scss:defaults --*/
-/*-- scss:defaults --*/
 
-/* Colores institucionales */
-/* fondo de la navbar */
+/* Cambiar color de navbar */
 $navbar-bg: #2F2E4E;
 
-/* fondo del valuebox */
-$valuebox-bg-primary: $navbar-bg;
+/* Cambiar color primario */
+$valuebox-bg-primary: #2F2E4E;
+$valuebox-bg-warning: #FCB714;
 
 
-/* Navbar en modo oscuro (texto blanco) */
-$navbar-dark-color: #ffffff;
-$navbar-dark-hover-color: #e6e6e6;
-$navbar-dark-active-color: #ffffff;
-$navbar-dark-brand-color: #ffffff;
+/* styles.css */
+.dt-button {
+    border: none !important;
+    border-radius: 50% !important;
+    padding: 0% !important;
+    background-color: #FCB714 !important;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    float: right;
+}
+
+/* Ícono SVG dentro del botón */
+.dt-button svg {
+    width: 20px !important;
+    height: 20px !important;
+}

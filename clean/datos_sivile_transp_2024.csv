@@ -46,7 +46,7 @@ ene-2024,2,2,Buenos Aires,No,Masculino,45-64,,Otro/desconocido,,Otro/desconocido
 ene-2024,2,2,Buenos Aires,No,Femenino,25-44,,Otro/desconocido,,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,Sí,,,,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
 ene-2024,2,2,Buenos Aires,No,Femenino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Moto/ciclomotor,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 ene-2024,2,2,Buenos Aires,No,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,,,,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
-ene-2024,2,2,Buenos Aires,No,Masculino,0-0,,Otro/desconocido,,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Automóvil,Automóvil,,,,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
+ene-2024,2,2,Buenos Aires,No,Masculino,0-1,,Otro/desconocido,,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Automóvil,Automóvil,,,,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
 ene-2024,2,2,Buenos Aires,No,Femenino,25-44,,Otro/desconocido,,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Conductor,Automóvil,Otro/desconocido,,,,,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
 ene-2024,2,2,Buenos Aires,No,Femenino,45-64,,Otro/desconocido,,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Conductor,Automóvil,Automóvil,,,,,1,fractura,Moderado,Trat. ambulatorio/alta
 ene-2024,2,2,Buenos Aires,No,Masculino,5-9,,Otro/desconocido,,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,Sí,,,Sí,2,Múltiples lesiones,Moderado,Derivación
@@ -608,7 +608,7 @@ oct-2024,2,2,Buenos Aires,No,Masculino,15-24,,Otro/desconocido,,Otro/desconocido
 oct-2024,2,2,Buenos Aires,No,Femenino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Moto/ciclomotor,,No,,,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,25-44,,Otro/desconocido,,Otro/desconocido,1,99,Otro lugar público,3,No intencional,Conductor,Automóvil,Automóvil,,,,,1,tec,Leve,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,Sí,,,1,herida/excoriación,Moderado,Trat. ambulatorio/alta
-oct-2024,2,2,Buenos Aires,No,Femenino,0-0,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Leve,Trat. ambulatorio/alta
+oct-2024,2,2,Buenos Aires,No,Femenino,0-1,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Leve,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,25-44,,Otro/desconocido,,Otro/desconocido,1,14,Otro lugar público,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,Sí,,,1,fractura,Moderado,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,,,,1,herida/excoriación,Moderado,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,25-44,,Otro/desconocido,,Otro/desconocido,99,,Otro/desconocido,3,No intencional,Conductor,Bicicleta,Otro/desconocido,,,,,1,trauma/hematoma,Moderado,Internación
@@ -660,7 +660,7 @@ oct-2024,2,2,Buenos Aires,No,Masculino,45-64,,Otro/desconocido,,Otro/desconocido
 oct-2024,2,2,Buenos Aires,No,Masculino,25-44,,Otro/desconocido,,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,,No,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,10-14,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Moto/ciclomotor,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Femenino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Automóvil,,,,,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
-oct-2024,2,2,Buenos Aires,No,Femenino,0-0,,Otro/desconocido,,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Objeto fijo,,,,No,1,politraumatismo,Moderado,Internación
+oct-2024,2,2,Buenos Aires,No,Femenino,0-1,,Otro/desconocido,,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Objeto fijo,,,,No,1,politraumatismo,Moderado,Internación
 oct-2024,2,2,Buenos Aires,No,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,,Sí,,,1,naturaleza/otro,Moderado,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,tec,Leve,Trat. ambulatorio/alta
 oct-2024,2,2,Buenos Aires,No,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,,No,,,1,tec,Moderado,Internación
@@ -1362,7 +1362,7 @@ oct-2024,10,10,Jujuy,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante
 oct-2024,10,10,Jujuy,No,Masculino,10-14,3,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,herida/excoriación,Leve,Internación
 oct-2024,10,10,Jujuy,No,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Animal,,,,,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
 oct-2024,10,10,Jujuy,No,Femenino,15-24,6,Secundario completo,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Tracción animal,,,,,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
-oct-2024,10,10,Jujuy,No,Femenino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Animal,,No,,,1,herida/excoriación,Leve,Trat. ambulatorio/alta
+oct-2024,10,10,Jujuy,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Animal,,No,,,1,herida/excoriación,Leve,Trat. ambulatorio/alta
 oct-2024,10,10,Jujuy,No,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camión,,,,,1,herida/excoriación,Grave,Fallecimiento
 oct-2024,10,10,Jujuy,No,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,herida/excoriación,Leve,Internación
 oct-2024,10,10,Jujuy,No,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,herida/excoriación,Leve,Internación
@@ -1578,7 +1578,7 @@ feb-2024,13,13,Mendoza,No,Femenino,45-64,3,Primario completo,2,Trabajador/a,1,4,
 ene-2024,13,13,Mendoza,No,Masculino,45-64,3,Primario completo,1,Trabajador/a,2,,Vivienda,3,No intencional,Conductor,Tracción animal,Evento sin colisión,,,,,2,Múltiples lesiones,Grave,Internación en área crítica
 feb-2024,13,13,Mendoza,No,Femenino,25-44,7,Terciario/universitario completo,1,Trabajador/a,1,4,Ruta/autopista,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,Sí,No,,2,Múltiples lesiones,Moderado,Internación
 feb-2024,13,13,Mendoza,No,Femenino,15-24,6,Secundario completo,5,Estudiante,1,4,Ruta/autopista,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,,Sí,No,,1,tec,Moderado,Internación
-feb-2024,13,13,Mendoza,No,Femenino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,No,,,No,1,politraumatismo,Moderado,Internación
+feb-2024,13,13,Mendoza,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,No,,,No,1,politraumatismo,Moderado,Internación
 feb-2024,13,13,Mendoza,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,,,Otro/desconocido,3,No intencional,Pasajero,Automóvil,Evento sin colisión,No,,,Sí,1,politraumatismo,Moderado,Internación
 feb-2024,13,13,Mendoza,No,Femenino,25-44,5,Secundario completo,1,Trabajador/a,1,4,Ruta/autopista,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,Sí,No,,1,naturaleza/otro,Grave,Internación en área crítica
 feb-2024,13,13,Mendoza,No,Masculino,45-64,2,Ninguno/primario incompleto,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Evento sin colisión,,No,No,,1,fractura,Moderado,Internación
@@ -1618,7 +1618,7 @@ mar-2024,13,13,Mendoza,No,Masculino,25-44,6,Secundario completo,1,Trabajador/a,1
 mar-2024,13,13,Mendoza,No,Femenino,25-44,6,Secundario completo,6,Trabajo no remunerado,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Tracción animal,No,Sí,No,,3,Múltiples lesiones,Moderado,Internación
 mar-2024,,13,Mendoza,,Masculino,65+,4,Primario completo,7,Jubilado/a o pensionado/a,1,1,Calle/avenida,3,No intencional,Conductor,Automóvil,Camión,Sí,No,No,No,3,Múltiples lesiones,Moderado,Internación
 mar-2024,13,13,Mendoza,No,Femenino,10-14,4,Primario completo,5,Estudiante,99,,Otro/desconocido,3,No intencional,Otro/desconocido,Tracción animal,Evento sin colisión,,,,,2,Múltiples lesiones,Moderado,Internación
-mar-2024,13,13,Mendoza,No,Masculino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Camioneta/furgoneta,Sí,,,,1,fractura,Moderado,Internación
+mar-2024,13,13,Mendoza,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Camioneta/furgoneta,Sí,,,,1,fractura,Moderado,Internación
 mar-2024,13,13,Mendoza,No,Masculino,15-24,4,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,Sí,No,,3,Múltiples lesiones,Moderado,Internación
 mar-2024,13,13,Mendoza,No,Femenino,45-64,7,Terciario/universitario completo,7,Jubilado/a o pensionado/a,1,1,Calle/avenida,3,No intencional,Conductor,Automóvil,Evento sin colisión,Sí,No,No,No,3,Múltiples lesiones,Moderado,Internación
 mar-2024,13,13,Mendoza,No,Masculino,15-24,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,,Sí,No,,3,Múltiples lesiones,Moderado,Internación
@@ -1696,11 +1696,11 @@ may-2024,13,13,Mendoza,No,Femenino,15-24,4,Primario completo,1,Trabajador/a,1,99
 jun-2024,13,13,Mendoza,No,Masculino,65+,5,Secundario completo,5,Estudiante,1,4,Ruta/autopista,3,No intencional,Conductor,Automóvil,Evento sin colisión,Sí,,,,1,fractura,Moderado,Internación
 jun-2024,13,13,Mendoza,No,Masculino,15-24,6,Secundario completo,5,Estudiante,1,4,Ruta/autopista,3,No intencional,Peatón,,Automóvil,,No,,,4,Múltiples lesiones,Moderado,Internación
 jun-2024,13,13,Mendoza,No,Masculino,25-44,4,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Automóvil,Moto/ciclomotor,,Sí,No,,1,tec,Moderado,Internación
-jun-2024,13,13,Mendoza,No,Masculino,0-0,4,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Animal,,Sí,No,,2,Múltiples lesiones,Grave,Internación en área crítica
+jun-2024,13,13,Mendoza,No,Masculino,0-1,4,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Animal,,Sí,No,,2,Múltiples lesiones,Grave,Internación en área crítica
 jun-2024,13,13,Mendoza,No,Masculino,25-44,7,Terciario/universitario completo,1,Trabajador/a,1,2,Calle/avenida,3,No intencional,Conductor,Automóvil,Camioneta/furgoneta,,Sí,No,,2,Múltiples lesiones,Moderado,Internación
 jun-2024,13,13,Mendoza,No,Masculino,25-44,7,Terciario/universitario completo,4,Desempleado/a,1,2,Calle/avenida,3,No intencional,Pasajero,Automóvil,Moto/ciclomotor,,Sí,No,,2,Múltiples lesiones,Moderado,Internación
 jun-2024,13,13,Mendoza,No,Femenino,25-44,7,Terciario/universitario completo,1,Trabajador/a,1,2,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,Sí,No,,2,Múltiples lesiones,Moderado,Internación
-jun-2024,13,13,Mendoza,No,Masculino,0-0,4,Primario completo,5,Estudiante,2,,Vivienda,3,No intencional,Conductor,Bicicleta,Bicicleta,,No,No,,2,Múltiples lesiones,Moderado,Internación
+jun-2024,13,13,Mendoza,No,Masculino,0-1,4,Primario completo,5,Estudiante,2,,Vivienda,3,No intencional,Conductor,Bicicleta,Bicicleta,,No,No,,2,Múltiples lesiones,Moderado,Internación
 jun-2024,13,13,Mendoza,No,Femenino,65+,99,Otro/desconocido,7,Jubilado/a o pensionado/a,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Evento sin colisión,,No,No,,3,Múltiples lesiones,Moderado,Internación
 jun-2024,13,13,Mendoza,No,Masculino,45-64,99,Otro/desconocido,99,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Conductor,Automóvil,Objeto fijo,,,,,2,Múltiples lesiones,Grave,Fallecimiento
 jun-2024,13,13,Mendoza,No,Masculino,15-24,4,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Automóvil,No,,,,1,herida/excoriación,Moderado,Internación
@@ -1730,7 +1730,7 @@ jul-2024,13,13,Mendoza,No,Masculino,45-64,2,Ninguno/primario incompleto,7,Jubila
 jul-2024,,13,Mendoza,,Masculino,45-64,5,Secundario completo,1,Trabajador/a,1,4,Ruta/autopista,3,No intencional,Peatón,,Camión,No,No,No,,4,Múltiples lesiones,Grave,Internación en área crítica
 jul-2024,13,13,Mendoza,No,Femenino,25-44,99,Otro/desconocido,99,Otro/desconocido,1,99,Otro lugar público,99,Otro/desconocido,Conductor,Bicicleta,Otro/desconocido,No,No,No,,2,Múltiples lesiones,Moderado,Internación
 jul-2024,13,13,Mendoza,No,Masculino,25-44,6,Secundario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,Sí,No,,3,Múltiples lesiones,Moderado,Internación
-jul-2024,13,13,Mendoza,No,Masculino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Otro/desconocido,No,,,Sí,2,Múltiples lesiones,Moderado,Internación
+jul-2024,13,13,Mendoza,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Otro/desconocido,No,,,Sí,2,Múltiples lesiones,Moderado,Internación
 jul-2024,13,13,Mendoza,No,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,No,Sí,No,,3,Múltiples lesiones,Moderado,Internación
 jul-2024,13,13,Mendoza,No,Femenino,45-64,5,Secundario completo,1,Trabajador/a,1,4,Ruta/autopista,3,No intencional,Conductor,Camioneta/furgoneta,Evento sin colisión,Sí,,,,4,Múltiples lesiones,Moderado,Internación
 jul-2024,13,13,Mendoza,No,Masculino,15-24,4,Primario completo,1,Trabajador/a,1,2,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Moto/ciclomotor,No,Sí,No,No,2,Múltiples lesiones,Moderado,Internación
@@ -1806,7 +1806,7 @@ oct-2024,13,13,Mendoza,No,Femenino,45-64,3,Primario completo,6,Trabajo no remune
 nov-2024,13,13,Mendoza,No,Masculino,25-44,7,Terciario/universitario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,Sí,No,No,3,Múltiples lesiones,Grave,Internación en área crítica
 nov-2024,13,13,Mendoza,No,Femenino,45-64,2,Ninguno/primario incompleto,1,Trabajador/a,1,14,Otro lugar público,3,No intencional,Conductor,Bicicleta,Objeto fijo,,No,No,,2,Múltiples lesiones,Moderado,Internación
 nov-2024,13,13,Mendoza,No,Femenino,25-44,3,Primario completo,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,Sí,No,,1,naturaleza/otro,Moderado,Internación
-nov-2024,13,13,Mendoza,No,Masculino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Automóvil,No,No,No,Sí,1,trauma/hematoma,Moderado,Internación
+nov-2024,13,13,Mendoza,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Automóvil,No,No,No,Sí,1,trauma/hematoma,Moderado,Internación
 nov-2024,13,13,Mendoza,No,Masculino,65+,2,Ninguno/primario incompleto,7,Jubilado/a o pensionado/a,1,2,Calle/avenida,3,No intencional,Conductor,Automóvil,Evento sin colisión,No,Sí,No,No,2,Múltiples lesiones,Moderado,Internación
 nov-2024,13,13,Mendoza,No,Femenino,15-24,6,Secundario completo,5,Estudiante,1,2,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,No,Sí,No,No,4,Múltiples lesiones,Grave,Internación en área crítica
 nov-2024,13,13,Mendoza,No,Femenino,5-9,3,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,Sí,No,,2,Múltiples lesiones,Moderado,Internación
@@ -2104,7 +2104,7 @@ feb-2024,18,18,San Juan,No,Masculino,15-24,6,Secundario completo,5,Estudiante,1,
 feb-2024,18,18,San Juan,No,Masculino,15-24,5,Secundario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 feb-2024,18,18,San Juan,No,Femenino,65+,3,Primario completo,7,Jubilado/a o pensionado/a,1,1,Calle/avenida,3,No intencional,Peatón,Otro/desconocido,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 feb-2024,18,18,San Juan,No,Masculino,10-14,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Automóvil,No,No,No,No,1,herida/excoriación,Moderado,Trat. ambulatorio/alta
-feb-2024,18,18,San Juan,No,Femenino,0-0,1,Ninguno/primario incompleto,99,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Peatón,Otro/desconocido,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Moderado,Internación
+feb-2024,18,18,San Juan,No,Femenino,0-1,1,Ninguno/primario incompleto,99,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Peatón,Otro/desconocido,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Moderado,Internación
 feb-2024,18,18,San Juan,No,Femenino,5-9,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,2,Múltiples lesiones,Moderado,Internación en área crítica
 feb-2024,18,18,San Juan,No,Masculino,2-4,1,Ninguno/primario incompleto,99,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,4,Múltiples lesiones,Moderado,Internación en área crítica
 feb-2024,18,18,San Juan,No,Masculino,15-24,4,Primario completo,2,Trabajador/a,1,4,Ruta/autopista,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,No,No,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
@@ -2353,7 +2353,7 @@ mar-2024,18,18,San Juan,No,Masculino,25-44,3,Primario completo,2,Trabajador/a,1,
 mar-2024,18,18,San Juan,No,Femenino,25-44,5,Secundario completo,6,Trabajo no remunerado,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,Sí,No,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
 mar-2024,18,2,Buenos Aires,Sí,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,4,Ruta/autopista,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,Sí,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 mar-2024,18,18,San Juan,No,Femenino,25-44,4,Primario completo,2,Trabajador/a,1,2,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,No,Sí,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
-mar-2024,18,18,San Juan,No,Masculino,1-1,1,Ninguno/primario incompleto,99,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Moderado,Internación
+mar-2024,18,18,San Juan,No,Masculino,0-1,1,Ninguno/primario incompleto,99,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Moderado,Internación
 mar-2024,18,18,San Juan,No,Masculino,15-24,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 mar-2024,18,18,San Juan,No,Masculino,45-64,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Animal,No,Sí,No,No,2,Múltiples lesiones,Moderado,Internación
 mar-2024,18,18,San Juan,No,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
@@ -3295,7 +3295,7 @@ ago-2024,18,18,San Juan,No,Femenino,25-44,4,Primario completo,6,Trabajo no remun
 ago-2024,18,18,San Juan,No,Femenino,25-44,4,Primario completo,6,Trabajo no remunerado,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,No,No,No,2,Múltiples lesiones,Moderado,Internación
 ago-2024,18,18,San Juan,No,Femenino,25-44,4,Primario completo,6,Trabajo no remunerado,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 ago-2024,18,18,San Juan,No,Femenino,15-24,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Omnibus,,,,,1,politraumatismo,Moderado,Internación
-ago-2024,18,18,San Juan,No,Masculino,1-1,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Automóvil,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
+ago-2024,18,18,San Juan,No,Masculino,0-1,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Automóvil,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 ago-2024,18,18,San Juan,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Automóvil,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 ago-2024,18,18,San Juan,No,Femenino,25-44,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Animal,No,No,No,No,3,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
 ago-2024,18,18,San Juan,No,Masculino,25-44,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Automóvil,Automóvil,No,No,No,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
@@ -3790,7 +3790,7 @@ nov-2024,18,18,San Juan,No,Masculino,25-44,99,Otro/desconocido,99,Otro/desconoci
 nov-2024,18,18,San Juan,No,Masculino,10-14,3,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Internación
 nov-2024,18,18,San Juan,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Evento sin colisión,,,,,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Femenino,25-44,,Otro/desconocido,,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,Sí,Sí,No,3,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
-nov-2024,18,18,San Juan,No,Masculino,1-1,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,Sí,No,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
+nov-2024,18,18,San Juan,No,Masculino,0-1,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,Sí,No,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Masculino,65+,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,Sí,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Masculino,25-44,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Objeto fijo,No,Sí,Sí,No,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Masculino,25-44,7,Terciario/universitario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
@@ -3813,7 +3813,7 @@ nov-2024,18,18,San Juan,No,Masculino,25-44,3,Primario completo,2,Trabajador/a,1,
 nov-2024,18,18,San Juan,No,Femenino,15-24,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Peatón,Otro/desconocido,Automóvil,,,,,3,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Femenino,25-44,4,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Moto/ciclomotor,,,,,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Femenino,15-24,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Peatón,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
-nov-2024,18,18,San Juan,No,Masculino,1-1,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
+nov-2024,18,18,San Juan,No,Masculino,0-1,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Masculino,25-44,3,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Automóvil,,,,,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Masculino,25-44,2,Ninguno/primario incompleto,99,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,,,,1,politraumatismo,Moderado,Internación
 nov-2024,18,18,San Juan,No,Masculino,25-44,3,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Moto/ciclomotor,,,,,1,trauma/hematoma,Moderado,Trat. ambulatorio/alta
@@ -3848,7 +3848,7 @@ nov-2024,18,18,San Juan,No,Masculino,25-44,5,Secundario completo,1,Trabajador/a,
 nov-2024,18,18,San Juan,No,Masculino,25-44,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Femenino,45-64,4,Primario completo,6,Trabajo no remunerado,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Tracción animal,,,,,1,herida/excoriación,Leve,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Femenino,15-24,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Omnibus,Omnibus,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
-nov-2024,18,18,San Juan,No,Masculino,0-0,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Omnibus,Omnibus,,,,,1,politraumatismo,Moderado,Internación
+nov-2024,18,18,San Juan,No,Masculino,0-1,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Omnibus,Omnibus,,,,,1,politraumatismo,Moderado,Internación
 nov-2024,18,18,San Juan,No,Masculino,10-14,3,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Femenino,25-44,4,Primario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
 nov-2024,18,18,San Juan,No,Femenino,25-44,5,Secundario completo,1,Trabajador/a,1,2,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Moderado,Trat. ambulatorio/alta
@@ -4020,7 +4020,7 @@ dic-2024,18,18,San Juan,No,Femenino,25-44,,Otro/desconocido,,Otro/desconocido,1,
 dic-2024,18,18,San Juan,No,Masculino,25-44,3,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,,,,,1,politraumatismo,Moderado,Internación
 dic-2024,18,18,San Juan,No,Femenino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Camioneta/furgoneta,,,,,1,politraumatismo,Moderado,Internación
 dic-2024,18,18,San Juan,No,Femenino,2-4,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,,,,,1,politraumatismo,Moderado,Internación
-dic-2024,18,18,San Juan,No,Masculino,0-0,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,No,No,No,3,Múltiples lesiones,Moderado,Internación
+dic-2024,18,18,San Juan,No,Masculino,0-1,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,No,No,No,3,Múltiples lesiones,Moderado,Internación
 dic-2024,18,18,San Juan,No,Masculino,15-24,5,Secundario completo,1,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Automóvil,No,No,No,No,2,Múltiples lesiones,Moderado,Trat. ambulatorio/alta
 dic-2024,18,18,San Juan,No,Masculino,15-24,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Automóvil,No,Sí,Sí,No,1,trauma/hematoma,Moderado,Internación
 dic-2024,18,18,San Juan,No,Masculino,25-44,7,Terciario/universitario completo,1,Trabajador/a,1,2,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Moto/ciclomotor,No,Sí,Sí,No,3,Múltiples lesiones,Moderado,Derivación
@@ -4079,7 +4079,7 @@ ene-2024,19,19,San Luis,No,Femenino,25-44,,Otro/desconocido,6,Trabajo no remuner
 ene-2024,19,19,San Luis,No,Masculino,15-24,4,Primario completo,5,Estudiante,1,3,Ruta/autopista,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,No,Sí,No,No,1,fractura,Moderado,Internación
 jul-2024,16,19,San Luis,Sí,Masculino,25-44,6,Secundario completo,2,Trabajador/a,1,3,Ruta/autopista,3,No intencional,Conductor,Automóvil,Evento sin colisión,Sí,,,Sí,1,naturaleza/otro,Otro/desconocido,Otro/desconocido
 jul-2024,16,19,San Luis,Sí,Femenino,25-44,5,Secundario completo,1,Trabajador/a,1,3,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,Sí,,,,1,politraumatismo,Leve,Trat. ambulatorio/alta
-jul-2024,16,19,San Luis,Sí,Masculino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,3,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,Sí,,,Sí,1,herida/excoriación,Leve,Internación
+jul-2024,16,19,San Luis,Sí,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,3,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,Sí,,,Sí,1,herida/excoriación,Leve,Internación
 jul-2024,16,19,San Luis,Sí,Femenino,5-9,1,Ninguno/primario incompleto,9,Otro/desconocido,1,3,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,Sí,,,No,1,trauma/hematoma,Leve,Internación
 jul-2024,16,19,San Luis,Sí,Femenino,2-4,2,Ninguno/primario incompleto,9,Otro/desconocido,1,3,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Evento sin colisión,Sí,,,No,1,herida/excoriación,Leve,Trat. ambulatorio/alta
 nov-2024,19,19,San Luis,No,Masculino,45-64,3,Primario completo,1,Trabajador/a,1,14,Otro lugar público,3,No intencional,Conductor,Tracción animal,Evento sin colisión,,,,,1,trauma/hematoma,Moderado,Internación
@@ -4265,7 +4265,7 @@ ago-2024,2,2,Buenos Aires,No,Masculino,10-14,,Otro/desconocido,,Otro/desconocido
 ene-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Internación
 ene-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,2,Múltiples lesiones,Leve,Trat. ambulatorio/alta
 ene-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,2,,Vivienda,3,No intencional,Conductor,Bicicleta,Evento sin colisión,No,No,No,No,1,fractura,Leve,Internación
-ene-2024,4,4,Córdoba,No,Femenino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Internación
+ene-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Internación
 ene-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Bicicleta,Evento sin colisión,No,No,No,No,1,herida/excoriación,Moderado,Trat. ambulatorio/alta
 ene-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,herida/excoriación,Moderado,Internación
 ene-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Camioneta/furgoneta,No,No,No,No,1,politraumatismo,Leve,Internación
@@ -4273,7 +4273,7 @@ ene-2024,4,4,Córdoba,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudian
 ene-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 ene-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Peatón,,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Internación
 ene-2024,4,4,Córdoba,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Internación
-ene-2024,4,4,Córdoba,No,Femenino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,2,Múltiples lesiones,Grave,Internación en área crítica
+ene-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,2,Múltiples lesiones,Grave,Internación en área crítica
 ene-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,2,Múltiples lesiones,Leve,Internación
 ene-2024,4,4,Córdoba,No,Masculino,10-14,3,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Evento sin colisión,No,No,No,No,1,herida/excoriación,Moderado,Internación
 ene-2024,4,4,Córdoba,No,Masculino,5-9,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Internación
@@ -4285,7 +4285,7 @@ feb-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiant
 feb-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Camioneta/furgoneta,,No,No,No,1,fractura,Moderado,Internación
 feb-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Bicicleta,Moto/ciclomotor,,No,No,No,1,politraumatismo,Grave,Internación en área crítica
 feb-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,4,Ruta/autopista,3,No intencional,Pasajero,Automóvil,Automóvil,No,No,No,No,1,herida/excoriación,Leve,Internación
-feb-2024,4,4,Córdoba,No,Masculino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
+feb-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 feb-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,tec,Leve,Trat. ambulatorio/alta
 feb-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,fractura,Moderado,Internación
 mar-2024,4,4,Córdoba,No,Masculino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,herida/excoriación,Leve,Trat. ambulatorio/alta
@@ -4301,11 +4301,11 @@ mar-2024,4,4,Córdoba,No,Masculino,10-14,4,Primario completo,5,Estudiante,1,1,Ca
 mar-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,2,Múltiples lesiones,Moderado,Internación
 mar-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Internación
 mar-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Internación
-mar-2024,4,4,Córdoba,No,Femenino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,,,,1,politraumatismo,Leve,Trat. ambulatorio/alta
+mar-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,,,,1,politraumatismo,Leve,Trat. ambulatorio/alta
 mar-2024,4,4,Córdoba,No,Femenino,5-9,1,Ninguno/primario incompleto,9,Otro/desconocido,1,4,Ruta/autopista,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,herida/excoriación,Moderado,Internación
 mar-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Bicicleta,Automóvil,No,No,No,No,1,politraumatismo,Moderado,Internación
 mar-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,herida/excoriación,Moderado,Internación
-mar-2024,4,4,Córdoba,No,Masculino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
+mar-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 mar-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Internación
 mar-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 mar-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,,No,No,No,3,Múltiples lesiones,Grave,Internación en área crítica
@@ -4313,7 +4313,7 @@ mar-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desc
 mar-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Peatón,,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Internación
 mar-2024,4,4,Córdoba,No,Femenino,10-14,4,Primario completo,5,Estudiante,1,4,Ruta/autopista,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,fractura,Moderado,Internación
 abr-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
-abr-2024,4,4,Córdoba,No,Femenino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Internación
+abr-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Internación
 abr-2024,4,4,Córdoba,No,Masculino,10-14,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Moto/ciclomotor,No,No,No,No,1,fractura,Moderado,Internación
 abr-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Camioneta/furgoneta,No,No,No,No,1,fractura,Moderado,Internación
 mar-2024,4,4,Córdoba,No,Femenino,10-14,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Camioneta/furgoneta,,,,,1,fractura,Grave,Internación en área crítica
@@ -4323,7 +4323,7 @@ abr-2024,4,4,Córdoba,No,Masculino,5-9,1,Ninguno/primario incompleto,9,Otro/desc
 abr-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 abr-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,fractura,Moderado,Internación
 abr-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,,No,No,No,1,fractura,Moderado,Internación
-abr-2024,4,4,Córdoba,No,Masculino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,2,,Vivienda,3,No intencional,Pasajero,Moto/ciclomotor,Otro/desconocido,No,No,No,No,1,herida/excoriación,Grave,Internación
+abr-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,2,,Vivienda,3,No intencional,Pasajero,Moto/ciclomotor,Otro/desconocido,No,No,No,No,1,herida/excoriación,Grave,Internación
 may-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Bicicleta,Evento sin colisión,No,No,No,No,1,herida/excoriación,Leve,Trat. ambulatorio/alta
 may-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Peatón,,Moto/ciclomotor,,No,No,No,1,politraumatismo,Moderado,Internación
 may-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Peatón,,Moto/ciclomotor,,No,No,No,1,politraumatismo,Moderado,Internación
@@ -4347,7 +4347,7 @@ jun-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desco
 jun-2024,4,4,Córdoba,No,Masculino,5-9,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Moderado,Internación
 jun-2024,4,4,Córdoba,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,fractura,Leve,Trat. ambulatorio/alta
 jun-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,Sí,No,No,1,politraumatismo,Moderado,Internación
-jun-2024,4,4,Córdoba,No,Masculino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,tec,Moderado,Internación
+jun-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,tec,Moderado,Internación
 jun-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,tec,Moderado,Internación
 jun-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,fractura,Moderado,Internación
 jun-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
@@ -4365,7 +4365,7 @@ jul-2024,4,4,Córdoba,No,Masculino,10-14,2,Ninguno/primario incompleto,5,Estudia
 jul-2024,4,4,Córdoba,No,Masculino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,politraumatismo,Leve,Internación
 jul-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,2,,Vivienda,3,No intencional,Pasajero,Bicicleta,Evento sin colisión,No,No,No,No,1,esguince/torcedura,Leve,Internación
 jul-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Internación
-jul-2024,4,4,Córdoba,No,Femenino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,herida/excoriación,Leve,Trat. ambulatorio/alta
+jul-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,herida/excoriación,Leve,Trat. ambulatorio/alta
 jul-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,fractura,Moderado,Internación
 jul-2024,4,4,Córdoba,No,Masculino,10-14,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,,,,1,herida/excoriación,Leve,Trat. ambulatorio/alta
 jul-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Peatón,,Moto/ciclomotor,,No,No,No,1,politraumatismo,Moderado,Internación
@@ -4387,13 +4387,13 @@ ago-2024,4,4,Córdoba,No,Femenino,10-14,3,Primario completo,5,Estudiante,1,1,Cal
 ago-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,herida/excoriación,Leve,Trat. ambulatorio/alta
 ago-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 ago-2024,4,4,Córdoba,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
-ago-2024,4,4,Córdoba,No,Masculino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
+ago-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 ago-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Omnibus,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 ago-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Peatón,,Moto/ciclomotor,No,No,No,No,1,fractura,Moderado,Internación
 ago-2024,4,4,Córdoba,No,Masculino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,No,No,No,1,fractura,Moderado,Internación
 ago-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Automóvil,Camión,,,,No,1,fractura,Moderado,Internación
 ago-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Objeto fijo,,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
-ago-2024,4,4,Córdoba,No,Femenino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
+ago-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
 ago-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,,No,No,No,1,fractura,Moderado,Internación en área crítica
 ago-2024,4,4,Córdoba,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,,No,No,No,1,politraumatismo,Moderado,Internación
 ago-2024,4,4,Córdoba,No,Femenino,10-14,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
@@ -4407,13 +4407,13 @@ sept-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiant
 sept-2024,4,4,Córdoba,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,naturaleza/otro,Moderado,Trat. ambulatorio/alta
 sept-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,trauma/hematoma,Leve,Internación
 sept-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,2,Múltiples lesiones,Leve,Trat. ambulatorio/alta
-sept-2024,4,4,Córdoba,No,Masculino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
+sept-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 sept-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,2,Múltiples lesiones,Moderado,Internación
 sept-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Internación
 sept-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Internación
 sept-2024,4,4,Córdoba,No,Masculino,5-9,1,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 sept-2024,4,4,Córdoba,No,Femenino,5-9,1,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,2,Múltiples lesiones,Grave,Internación en área crítica
-sept-2024,4,4,Córdoba,No,Femenino,0-0,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,trauma/hematoma,Moderado,Internación
+sept-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,trauma/hematoma,Moderado,Internación
 sept-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Bicicleta,Evento sin colisión,No,No,No,No,1,herida/excoriación,Moderado,Internación
 sept-2024,4,4,Córdoba,No,Masculino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Trat. ambulatorio/alta
 oct-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Bicicleta,Evento sin colisión,No,No,No,No,1,fractura,Moderado,Trat. ambulatorio/alta
@@ -4423,7 +4423,7 @@ oct-2024,4,4,Córdoba,No,Femenino,10-14,3,Primario completo,5,Estudiante,1,1,Cal
 oct-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Internación
 oct-2024,4,4,Córdoba,No,Femenino,5-9,1,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,fractura,Moderado,Internación
 oct-2024,4,4,Córdoba,No,Masculino,5-9,1,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
-oct-2024,4,4,Córdoba,No,Masculino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Bicicleta,Evento sin colisión,No,No,No,No,1,herida/excoriación,Moderado,Internación
+oct-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Bicicleta,Evento sin colisión,No,No,No,No,1,herida/excoriación,Moderado,Internación
 oct-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,2,Calle/avenida,3,No intencional,Pasajero,Camioneta/furgoneta,Camioneta/furgoneta,No,,,,1,politraumatismo,Moderado,Internación
 oct-2024,4,4,Córdoba,No,Masculino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
 oct-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,,No,No,No,1,tec,Leve,Trat. ambulatorio/alta
@@ -4440,7 +4440,7 @@ oct-2024,4,4,Córdoba,No,Masculino,2-4,1,Ninguno/primario incompleto,9,Otro/desc
 oct-2024,4,4,Córdoba,No,Femenino,10-14,3,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Grave,Internación
 oct-2024,4,4,Córdoba,No,Femenino,5-9,1,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,politraumatismo,Leve,Internación
 nov-2024,4,4,Córdoba,No,Masculino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,fractura,Moderado,Internación
-nov-2024,4,4,Córdoba,No,Masculino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
+nov-2024,4,4,Córdoba,No,Masculino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,No,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
 nov-2024,4,4,Córdoba,No,Masculino,5-9,1,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,fractura,Moderado,Internación
 nov-2024,4,4,Córdoba,No,Femenino,10-14,4,Primario completo,5,Estudiante,,,Otro/desconocido,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,No,No,No,No,1,tec,Moderado,Trat. ambulatorio/alta
 nov-2024,4,4,Córdoba,No,Femenino,10-14,4,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Otro/desconocido,Moto/ciclomotor,Automóvil,,No,No,No,2,Múltiples lesiones,Moderado,Internación
@@ -4452,7 +4452,7 @@ nov-2024,4,4,Córdoba,No,Femenino,10-14,3,Primario completo,5,Estudiante,1,1,Cal
 nov-2024,4,4,Córdoba,No,Masculino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Animal,No,No,No,No,2,Múltiples lesiones,Moderado,Internación
 nov-2024,4,4,Córdoba,No,Masculino,5-9,1,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,1,Interpersonal,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Leve,Internación
 nov-2024,4,4,Córdoba,No,Masculino,10-14,3,Primario completo,5,Estudiante,1,1,Calle/avenida,3,No intencional,Conductor,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,tec,Grave,Internación en área crítica
-nov-2024,4,4,Córdoba,No,Femenino,1-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Moderado,Internación
+nov-2024,4,4,Córdoba,No,Femenino,0-1,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Evento sin colisión,No,No,No,No,1,politraumatismo,Moderado,Internación
 nov-2024,4,4,Córdoba,No,Femenino,5-9,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
 nov-2024,4,4,Córdoba,No,Femenino,2-4,1,Ninguno/primario incompleto,9,Otro/desconocido,1,1,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Automóvil,,No,No,No,1,trauma/hematoma,Leve,Trat. ambulatorio/alta
 nov-2024,4,4,Córdoba,No,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,1,2,Calle/avenida,3,No intencional,Pasajero,Moto/ciclomotor,Moto/ciclomotor,,No,No,No,2,Múltiples lesiones,Moderado,Internación

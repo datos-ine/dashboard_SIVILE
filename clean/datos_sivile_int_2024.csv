@@ -482,7 +482,7 @@ jul-2024,10,10,Jujuy,Femenino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Cal
 ago-2024,10,10,Jujuy,Masculino,45-64,5,Secundario completo,1,Trabajador/a,2,,Vivienda,3,Golpe,1,Interpersonal,,Otro/desconocido,Otro/desconocido,Otro/desconocido,2,Múltiples lesiones,Moderado,Internación
 ago-2024,10,10,Jujuy,Masculino,25-44,5,Secundario completo,1,Trabajador/a,2,,Vivienda,4,Caída,1,Interpersonal,,Pareja/ex pareja,Femenino,Otro/desconocido,2,Múltiples lesiones,Leve,Trat. ambulatorio/alta
 ago-2024,10,10,Jujuy,Masculino,15-24,99,Otro/desconocido,99,Otro/desconocido,1,1,Calle/avenida,3,Golpe,1,Interpersonal,,Extraño,Masculino,Riñas/peleas,1,herida/excoriación,Moderado,Internación en área crítica
-sept-2024,10,10,Jujuy,Femenino,0-0,5,Secundario completo,2,Trabajador/a,1,5,Vereda,6,Objeto cortopunzante,1,Interpersonal,,Otro/desconocido,Otro/desconocido,Otro/desconocido,1,herida/excoriación,Moderado,Internación
+sept-2024,10,10,Jujuy,Femenino,0-1,5,Secundario completo,2,Trabajador/a,1,5,Vereda,6,Objeto cortopunzante,1,Interpersonal,,Otro/desconocido,Otro/desconocido,Otro/desconocido,1,herida/excoriación,Moderado,Internación
 sept-2024,10,10,Jujuy,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,1,Calle/avenida,3,Golpe,1,Interpersonal,,Extraño,Masculino,Riñas/peleas,1,herida/excoriación,Leve,Alta voluntaria/fuga
 sept-2024,10,10,Jujuy,Masculino,25-44,5,Secundario completo,2,Trabajador/a,1,11,Otro lugar público,3,Golpe,1,Interpersonal,,Extraño,Masculino,Riñas/peleas,1,herida/excoriación,Leve,Internación
 sept-2024,10,10,Jujuy,Femenino,15-24,4,Primario completo,5,Estudiante,2,,Vivienda,6,Objeto cortopunzante,2,Autoinfligida,Sí,,,,1,herida/excoriación,Moderado,Internación
@@ -560,7 +560,7 @@ dic-2024,10,10,Jujuy,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,,,Otro/
 ene-2024,10,10,Jujuy,Femenino,15-24,,Otro/desconocido,,Otro/desconocido,,,Otro/desconocido,6,Objeto cortopunzante,2,Autoinfligida,Desconocido,,,,1,herida/excoriación,Otro/desconocido,Internación
 jul-2024,10,10,Jujuy,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,1,1,Calle/avenida,6,Objeto cortopunzante,1,Interpersonal,,Extraño,Masculino,Riñas/peleas,2,Múltiples lesiones,Leve,Trat. ambulatorio/alta
 ene-2024,13,13,Mendoza,Masculino,25-44,99,Otro/desconocido,99,Otro/desconocido,1,6,Parque/plaza,15,Asfixia/ahogamiento,2,Autoinfligida,,,,,1,naturaleza/otro,Moderado,Internación
-ene-2024,13,13,Mendoza,Femenino,0-0,99,Otro/desconocido,99,Otro/desconocido,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,Sí,,,,1,intoxicación,Moderado,Internación
+ene-2024,13,13,Mendoza,Femenino,0-1,99,Otro/desconocido,99,Otro/desconocido,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,Sí,,,,1,intoxicación,Moderado,Internación
 ene-2024,13,13,Mendoza,Femenino,10-14,4,Primario completo,6,Trabajo no remunerado,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,,,,,1,intoxicación,Moderado,Internación
 ene-2024,13,13,Mendoza,Masculino,15-24,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,8,Quemaduras,1,Interpersonal,,Extraño,Masculino,Robo/otro crimen,2,Múltiples lesiones,Moderado,Internación
 ene-2024,13,13,Mendoza,Masculino,15-24,3,Primario completo,7,Jubilado/a o pensionado/a,1,1,Calle/avenida,3,Golpe,1,Interpersonal,,Amigos/conocidos,Múltiples agresores,Riñas/peleas,2,Múltiples lesiones,Moderado,Internación
@@ -578,7 +578,7 @@ ene-2024,13,13,Mendoza,Femenino,15-24,99,Otro/desconocido,99,Otro/desconocido,2,
 ene-2024,13,13,Mendoza,Femenino,25-44,4,Primario completo,4,Desempleado/a,1,6,Parque/plaza,15,Asfixia/ahogamiento,2,Autoinfligida,Sí,,,,1,naturaleza/otro,Moderado,Internación
 ene-2024,13,13,Mendoza,Masculino,25-44,4,Primario completo,3,Trabajador/a,2,,Vivienda,15,Asfixia/ahogamiento,2,Autoinfligida,Sí,,,,1,naturaleza/otro,Moderado,Internación
 ene-2024,13,13,Mendoza,Femenino,15-24,4,Primario completo,4,Desempleado/a,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,Sí,,,,1,intoxicación,Moderado,Internación
-ene-2024,13,13,Mendoza,Femenino,0-0,5,Secundario completo,4,Desempleado/a,1,2,Calle/avenida,2,Envenenamiento/intoxicación,2,Autoinfligida,Sí,,,,1,intoxicación,Moderado,Internación
+ene-2024,13,13,Mendoza,Femenino,0-1,5,Secundario completo,4,Desempleado/a,1,2,Calle/avenida,2,Envenenamiento/intoxicación,2,Autoinfligida,Sí,,,,1,intoxicación,Moderado,Internación
 ene-2024,13,13,Mendoza,Femenino,10-14,2,Ninguno/primario incompleto,5,Estudiante,2,,Vivienda,6,Objeto cortopunzante,2,Autoinfligida,,,,,1,naturaleza/otro,Moderado,Internación
 ene-2024,13,13,Mendoza,Masculino,15-24,4,Primario completo,1,Trabajador/a,2,,Vivienda,6,Objeto cortopunzante,1,Interpersonal,,Amigos/conocidos,Masculino,Otro/desconocido,1,herida/excoriación,Moderado,Internación
 ene-2024,13,13,Mendoza,Femenino,25-44,3,Primario completo,6,Trabajo no remunerado,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,Sí,,,,1,intoxicación,Moderado,Internación
@@ -652,12 +652,12 @@ may-2024,13,13,Mendoza,Femenino,25-44,5,Secundario completo,6,Trabajo no remuner
 may-2024,13,13,Mendoza,Masculino,45-64,3,Primario completo,2,Trabajador/a,1,1,Calle/avenida,7,Arma de fuego,1,Interpersonal,,Extraño,Múltiples agresores,Otro/desconocido,1,herida/excoriación,Moderado,Internación
 may-2024,13,13,Mendoza,Masculino,45-64,5,Secundario completo,1,Trabajador/a,2,,Vivienda,3,Golpe,1,Interpersonal,,Amigos/conocidos,Femenino,Riñas/peleas,1,trauma/hematoma,Moderado,Internación
 jun-2024,13,13,Mendoza,Masculino,45-64,4,Primario completo,4,Desempleado/a,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,,,,,1,intoxicación,Moderado,Internación
-jun-2024,13,13,Mendoza,Masculino,0-0,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,Golpe,1,Interpersonal,,Amigos/conocidos,Múltiples agresores,Riñas/peleas,1,fractura,Moderado,Internación
+jun-2024,13,13,Mendoza,Masculino,0-1,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,Golpe,1,Interpersonal,,Amigos/conocidos,Múltiples agresores,Riñas/peleas,1,fractura,Moderado,Internación
 jun-2024,13,13,Mendoza,Masculino,25-44,99,Otro/desconocido,99,Otro/desconocido,1,99,Otro lugar público,3,Golpe,1,Interpersonal,,Amigos/conocidos,Múltiples agresores,Otro/desconocido,2,Múltiples lesiones,Moderado,Internación
 jun-2024,13,13,Mendoza,Femenino,15-24,99,Otro/desconocido,99,Otro/desconocido,99,,Otro/desconocido,2,Envenenamiento/intoxicación,2,Autoinfligida,Desconocido,,,,1,intoxicación,Moderado,Internación
 jun-2024,13,13,Mendoza,Masculino,25-44,4,Primario completo,2,Trabajador/a,1,1,Calle/avenida,3,Golpe,1,Interpersonal,,Amigos/conocidos,Masculino,Riñas/peleas,2,Múltiples lesiones,Moderado,Internación
 jun-2024,13,13,Mendoza,Masculino,15-24,4,Primario completo,1,Trabajador/a,99,,Otro/desconocido,2,Envenenamiento/intoxicación,2,Autoinfligida,Desconocido,,,,1,intoxicación,Moderado,Internación
-jun-2024,13,13,Mendoza,Femenino,0-0,3,Primario completo,4,Desempleado/a,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,,,,,1,intoxicación,Moderado,Internación
+jun-2024,13,13,Mendoza,Femenino,0-1,3,Primario completo,4,Desempleado/a,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,,,,,1,intoxicación,Moderado,Internación
 jun-2024,13,13,Mendoza,Femenino,15-24,5,Secundario completo,5,Estudiante,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,,,,,1,intoxicación,Moderado,Internación
 jul-2024,13,13,Mendoza,Femenino,15-24,4,Primario completo,5,Estudiante,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,Sí,,,,1,intoxicación,Moderado,Internación
 jul-2024,13,13,Mendoza,Masculino,25-44,99,Otro/desconocido,99,Otro/desconocido,99,,Otro/desconocido,2,Envenenamiento/intoxicación,2,Autoinfligida,Desconocido,,,,1,intoxicación,Moderado,Internación
@@ -1345,9 +1345,9 @@ jul-2024,19,19,San Luis,Masculino,10-14,,Otro/desconocido,,Otro/desconocido,2,,V
 oct-2024,19,19,San Luis,Femenino,10-14,,Otro/desconocido,,Otro/desconocido,2,,Vivienda,22,Otro/desconocido,2,Autoinfligida,Sí,,,,1,herida/excoriación,Otro/desconocido,Internación
 oct-2024,19,19,San Luis,Femenino,10-14,,Otro/desconocido,,Otro/desconocido,2,,Vivienda,6,Objeto cortopunzante,2,Autoinfligida,Sí,,,,1,herida/excoriación,Leve,Internación
 nov-2024,19,19,San Luis,Femenino,10-14,4,Primario completo,5,Estudiante,2,,Vivienda,2,Envenenamiento/intoxicación,2,Autoinfligida,,,,,1,intoxicación,Moderado,Internación
-ene-2024,22,22,Santiago del Estero,Femenino,0-0,,Otro/desconocido,,Otro/desconocido,2,,Vivienda,6,Objeto cortopunzante,1,Interpersonal,,Pareja/ex pareja,Masculino,Violencia doméstica/intrafamiliar,1,herida/excoriación,Moderado,Otro/desconocido
+ene-2024,22,22,Santiago del Estero,Femenino,0-1,,Otro/desconocido,,Otro/desconocido,2,,Vivienda,6,Objeto cortopunzante,1,Interpersonal,,Pareja/ex pareja,Masculino,Violencia doméstica/intrafamiliar,1,herida/excoriación,Moderado,Otro/desconocido
 ene-2024,22,22,Santiago del Estero,Masculino,25-44,,Otro/desconocido,,Otro/desconocido,,,Otro/desconocido,6,Objeto cortopunzante,1,Interpersonal,,Pareja/ex pareja,Femenino,Violencia doméstica/intrafamiliar,1,herida/excoriación,Moderado,Otro/desconocido
-ene-2024,22,22,Santiago del Estero,Masculino,0-0,,Otro/desconocido,,Otro/desconocido,,,Otro/desconocido,6,Objeto cortopunzante,1,Interpersonal,,Otro familiar,Masculino,Otro/desconocido,1,herida/excoriación,Moderado,Otro/desconocido
+ene-2024,22,22,Santiago del Estero,Masculino,0-1,,Otro/desconocido,,Otro/desconocido,,,Otro/desconocido,6,Objeto cortopunzante,1,Interpersonal,,Otro familiar,Masculino,Otro/desconocido,1,herida/excoriación,Moderado,Otro/desconocido
 ene-2024,22,22,Santiago del Estero,Masculino,25-44,,Otro/desconocido,,Otro/desconocido,,,Otro/desconocido,3,Golpe,1,Interpersonal,,Extraño,Múltiples agresores,Robo/otro crimen,1,naturaleza/otro,Moderado,Internación
 mar-2024,22,22,Santiago del Estero,Femenino,25-44,,Otro/desconocido,,Otro/desconocido,,,Otro/desconocido,3,Golpe,1,Interpersonal,,Amigos/conocidos,Otro/desconocido,Riñas/peleas,1,naturaleza/otro,Otro/desconocido,Otro/desconocido
 mar-2024,22,22,Santiago del Estero,Masculino,15-24,,Otro/desconocido,,Otro/desconocido,,,Otro/desconocido,6,Objeto cortopunzante,1,Interpersonal,,Otro familiar,Masculino,Riñas/peleas,1,naturaleza/otro,Leve,Otro/desconocido

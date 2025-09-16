@@ -1,0 +1,307 @@
+---
+title: "Reporte Epidemiológico SIVILE"
+author: Instituto Nacional de Epidemiología
+format: 
+    dashboard:
+        logo: logo.svg
+        orientation: columns
+        vertical_layout: fill
+        theme: custom.scss
+server: shiny
+---
+
+```{r}
+#| id: Cargar paquetes
+#| context: setup
+pacman::p_load(
+  # Interactividad
+  shiny,
+  # Mapas
+  sf,
+  leaflet,
+  geoAr,
+  # Gráficos
+  cols4all,
+  plotly,
+  # Tablas
+  DT,
+  bsicons,
+  # Manejo de datos
+  rio,
+  janitor,
+  tidyverse
+)
+```
+
+```{r}
+#| id: Cargar datos
+#| context: setup
+## Cargar número observaciones dataset crudo
+res <- import("clean/resumen.csv")
+
+## Cargar dataset SIVILE
+datos <- import("clean/datos_sivile_2024.csv")
+
+## Cargar dataset lesiones por eventos de tránsito
+datos_tr <- import("clean/datos_sivile_transp_2024.csv")
+
+## Cargar dataset lesiones intencionales
+datos_in <- import("clean/datos_sivile_int_2024.csv")
+```
+
+# UCL
+## Valuebox {width="30%"}
+
+```{r}
+#| content: valuebox
+#| title: UCL SIVILE activas
+#| icon: hospital
+#| color: primary
+list(value = res$n_ucl)
+```
+
+```{r}
+#| content: valuebox
+#| title: Registros totales
+#| icon: file-text
+list(value = res$n)
+```
+
+```{r}
+#| content: valuebox
+#| title: Registros válidos (*)
+#| icon: file-text
+#| color: warning
+list(value = nrow(datos))
+```
+
+<div style="font-size:0.6rem;">
+(*) Datos completos para sexo, edad, provincia de ocurrencia, mecanismo e intencionalidad de la lesión.
+</div>
+
+## Tabla {width="70%"}
+
+```{r}
+#| id: Tabla frecuencia x UCL
+## Crear tabla
+tab1 <- datos |>
+  count(ucl) |>
+  mutate(pct = n / sum(n))
+
+## Tabla interactiva
+tab1 |>
+  datatable(
+    rownames = FALSE,
+    colnames = c("UCL", "Frecuencia", "%"),
+    extensions = "Buttons",
+    escape = FALSE,
+    options = list(
+      searching = FALSE,
+      info = FALSE,
+      paging = FALSE,
+      autoWidth = FALSE,
+      dom = 'Bftlp',
+      buttons = list(
+        list(
+          extend = "excel",
+          text = as.character(bs_icon("file-earmark-spreadsheet")),
+          title = "frec_provincia"
+        ),
+        list(
+          extend = "csv",
+          text = as.character(bs_icon("filetype-csv")),
+          title = "frec_provincia"
+        )
+      )
+    )
+  ) |>
+
+  formatPercentage(columns = "pct", digits = 2)
+```
+
+# Provincia
+```{r}
+#| id: Mapa y tabla por provincia
+#| context: server
+## Mapa
+output$mapa_sivile <- renderLeaflet({
+  req(datos)
+  # Crear shapefile provincias
+  shp_arg <- datos |>
+    tabyl(prov_lesion_cat, sexo) |>
+    adorn_totals(where = "col") |>
+    # Añadir centroides provincias
+    left_join(
+      get_provincias(),
+      by = join_by("prov_lesion_cat" == "nombre")
+    ) |>
+    # Convertir a objeto espacial
+    st_as_sf(
+      coords = c(x = "centroide_lon", y = "centroide_lat"),
+      crs = 4326
+    )
+
+  # Crear paleta personalizada
+  pal <- colorNumeric(
+    palette = c4a(palette = input$color),
+    domain = c(0, shp_arg$Total)
+  )
+
+  # Generar mapa
+  shp_arg |>
+    leaflet(options = leafletOptions(minZoom = 3, maxZoom = 6)) |>
+    # Capa base Argentina
+    addArgTiles() |>
+
+    # Zoom inicial
+    setView(
+      zoom = 3,
+      lng = -64.9673,
+      lat = -34.9965,
+    ) |>
+
+    # Frecuencia por provincia
+    addCircleMarkers(
+      fillOpacity = 0.5,
+      stroke = FALSE,
+      color = ~ pal(Total),
+      radius = ~ scales::rescale(sqrt(Total), c(5, 15)),
+      group = "Total"
+    ) |>
+
+    # Frecuencia por provincia (Mujeres)
+    addCircleMarkers(
+      fillOpacity = 0.5,
+      stroke = FALSE,
+      color = ~ pal(Femenino),
+      radius = ~ scales::rescale(sqrt(Femenino), c(5, 15)),
+      group = "Mujeres"
+    ) |>
+
+    # Frecuencia por provincia (Varones)
+    addCircleMarkers(
+      fillOpacity = 0.5,
+      stroke = FALSE,
+      color = ~ pal(Masculino),
+      radius = ~ scales::rescale(sqrt(Masculino), c(5, 15)),
+      group = "Varones"
+    ) |>
+
+    # Leyenda
+    addLegend(
+      title = "Frecuencia",
+      pal = pal,
+      values = shp_arg$Total
+    ) |>
+
+    # Control de capas
+    addLayersControl(overlayGroups = c("Total", "Mujeres", "Varones")) |>
+    hideGroup(group = c("Mujeres", "Varones"))
+})
+
+
+## Tabla
+output$tab_prov <- renderDT({
+  req(datos)
+
+  # Dataset para la tabla
+  datos_tab <- datos |>
+    # Cambiar etiqueta CABA
+    mutate(
+      prov_lesion_cat = if_else(prov_lesion_id == 1, "CABA", prov_lesion_cat)
+    ) |>
+    # Seleccionar columnas
+    select(
+      Provincia = prov_lesion_cat,
+      Sexo = sexo,
+      Edad = grupo_edad,
+      Intencionalidad = intencionalidad_cat,
+      Egreso = egreso_cat
+    )
+
+  # Definir estratos
+  vars <- names(datos_tab)
+  v1 <- intersect(input$vars, vars)
+  # v1 <- intersect(input$var1, vars)
+  # v2 <- intersect(input$var2, vars)
+
+  # Generar tabla
+  if (length(v1) == 0) {
+    tab2 <- datos_tab |>
+      count(Provincia) |>
+      mutate(pct = n / sum(n, na.rm = TRUE))
+  } else {
+    tab2 <- datos_tab |>
+      count(Provincia, across(any_of(v1))) |>
+      mutate(pct = n / sum(n, na.rm = TRUE), .by = Provincia)
+  }
+
+  # Renderizar tabla
+  tab2 |>
+    rename(Frecuencia = n, "%" = pct) |>
+    datatable(
+      rownames = FALSE,
+      filter = "top",
+      extensions = "Buttons",
+      escape = FALSE,
+      options = list(
+        searching = FALSE,
+        info = FALSE,
+        paging = FALSE,
+        autoWidth = FALSE,
+        dom = 'Bftlp',
+        buttons = list(
+          list(
+            extend = "excel",
+            text = as.character(bs_icon("file-earmark-spreadsheet")),
+            title = "frec_provincia"
+          ),
+          list(
+            extend = "csv",
+            text = as.character(bs_icon("filetype-csv")),
+            title = "frec_provincia"
+          )
+        )
+      )
+    ) |>
+
+    formatPercentage(columns = "%", digits = 2)
+})
+```
+
+## {.toolbar}
+```{r}
+#| id: Barra de herramientas
+## Selector de paletas
+radioButtons(
+  inputId = "color",
+  label = "Paleta:",
+  inline = TRUE,
+  choices = c(
+    "Managua" = "scico.managua",
+    "Icefire" = "icefire",
+    "Tokyo" = "-scico.tokyo",
+    "Viridis" = "-viridis"
+  ),
+  selected = "-viridis"
+)
+
+## Selector de variables
+checkboxGroupInput(
+  inputId = "vars",
+  label = "Estratificar tabla:",
+  inline = TRUE,
+  choices = c("Sexo", "Edad", "Intencionalidad", "Egreso"),
+  selected = NULL
+)
+```
+
+## 
+```{r}
+#| layout-ncol: 2
+# Mostrar mapa
+leafletOutput("mapa_sivile")
+
+# Mostrar tabla
+DTOutput("tab_prov")
+```
